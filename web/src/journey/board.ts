@@ -18,6 +18,7 @@ export type BoardItem = {
   verdict: Verdict;
   tab: Tab;
   tag?: ArchiveTag; // set only when tab === "archive"
+  interestSent?: boolean; // archived trials the user already sent interest to
   openQuestions: string[]; // questionIds of answerable unknown checks, unique, in check order
 };
 export type Board = Record<Tab, BoardItem[]>;
@@ -48,11 +49,16 @@ export function buildBoard(m: MatchOutput, s: Session): Board {
     const id = result.trial.nctId;
     const verdict = verdictOf(result);
     const open = openQuestions(result);
-    const item = (tab: Tab, tag?: ArchiveTag): BoardItem =>
-      tag ? { result, verdict, tab, tag, openQuestions: open } : { result, verdict, tab, openQuestions: open };
+    const sent = s.registered.includes(id);
+    const item = (tab: Tab, tag?: ArchiveTag): BoardItem => {
+      const base: BoardItem = { result, verdict, tab, openQuestions: open };
+      return tag ? { ...base, tag, ...(sent && { interestSent: true }) } : base;
+    };
 
-    if (s.archived.includes(id)) handArchived.push(item("archive", s.registered.includes(id) ? "registered" : verdict));
-    else if (s.registered.includes(id)) registered.push(item("registered"));
+    // A registered trial stays registered until a later answer rules the user out;
+    // then it drops to the archive, still marked "interest sent".
+    if (s.archived.includes(id)) handArchived.push(item("archive", verdict));
+    else if (sent && verdict !== "not_qualified") registered.push(item("registered"));
     else if (verdict === "not_qualified") autoArchived.push(item("archive", "not_qualified"));
     else if (verdict === "qualified") board.qualified.push(item("qualified"));
     else board.feed.push(item("feed"));

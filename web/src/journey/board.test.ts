@@ -47,25 +47,30 @@ describe("buildBoard placement", () => {
     expect(board().feed[0].tag).toBeUndefined();
   });
 
-  it("registered stays registered after an answer flips the verdict", () => {
+  it("registered drops to archive, marked interest sent, when an answer rules the user out", () => {
     const s = register(newSession(profile), T2D);
     expect(where(board(s), T2D)).toBe("registered");
+    expect(board(s).registered[0].interestSent).toBeUndefined();
     const flipped = answer(s, "q_pancreatitis", true);
-    expect(where(board(flipped), T2D)).toBe("registered");
-    expect(board(flipped).registered[0].verdict).toBe("not_qualified");
+    expect(where(board(flipped), T2D)).toBe("archive");
+    expect(board(flipped).archive.find((i) => i.result.trial.nctId === T2D)).toMatchObject({
+      tag: "not_qualified",
+      interestSent: true,
+    });
   });
 
-  it("archived beats registered beats verdict, and tags registered trials", () => {
+  it("archived beats registered beats verdict, and marks registered trials interest sent", () => {
     const s = archive(register(register(newSession(profile), LIFESTYLE), T2D), T2D);
     const b = board(s);
-    expect(b.archive[0]).toMatchObject({ tab: "archive", tag: "registered" });
+    expect(b.archive[0]).toMatchObject({ tab: "archive", tag: "unsure", interestSent: true });
     expect(b.archive[0].result.trial.nctId).toBe(T2D);
     expect(b.registered.map((i) => i.result.trial.nctId)).toEqual([LIFESTYLE]);
     expect(board(archive(newSession(profile), HF)).archive[0].tag).toBe("unsure");
+    expect(board(archive(newSession(profile), HF)).archive[0].interestSent).toBeUndefined();
   });
 
   it("orders registered by registration and hand-archived (newest first) before automatic", () => {
-    const s = archive(archive(register(register(withAnswers({ q_heart_attack_6m: true }), HF), T2D), LIFESTYLE), T2D);
+    const s = archive(archive(register(register(newSession(profile), HF), T2D), LIFESTYLE), T2D);
     const b = board(s);
     expect(b.registered.map((i) => i.result.trial.nctId)).toEqual([HF]);
     expect(b.archive.slice(0, 2).map((i) => i.result.trial.nctId)).toEqual([T2D, LIFESTYLE]);

@@ -97,10 +97,23 @@ export function TrialCard({
             {t("journey.interestSent")}
           </p>
         )}
-        {tab === "archive" && item.tag && (
-          <span className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${tags[item.tag]}`}>
-            {t(`journey.tags.${item.tag}`)}
-          </span>
+        {tab === "archive" && (item.tag || item.interestSent) && (
+          <div className="flex flex-wrap gap-1.5">
+            {item.tag && (
+              <span className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${tags[item.tag]}`}>
+                {t(`journey.tags.${item.tag}`)}
+              </span>
+            )}
+            {item.interestSent && (
+              <span
+                data-testid="tag-interest-sent"
+                className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-bold ${tags.registered}`}
+              >
+                <Icon name="registered" className="h-3.5 w-3.5" />
+                {t("journey.tags.interestSent")}
+              </span>
+            )}
+          </div>
         )}
       </div>
     </button>
