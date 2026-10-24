@@ -1,0 +1,12 @@
+node_modules/
+.env
+dist/
+data/raw/trials.json
+data/cache/
+data/compiled/
+web/public/data/trials.*.json
+web/public/data/meta.json
+test-results/
+playwright-report/
+.DS_Store
+data/pipeline-last-run.log

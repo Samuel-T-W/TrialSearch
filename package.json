@@ -1,0 +1,40 @@
+{
+  "name": "trialsearch",
+  "version": "1.0.0",
+  "description": "TrialSearch - private, plain-language clinical trial matching for Massachusetts",
+  "scripts": {
+    "data": "tsx pipeline/data.ts",
+    "data:fixture": "tsx pipeline/data.ts fixture",
+    "pull": "tsx pipeline/pull.ts",
+    "eval": "tsx pipeline/eval.ts",
+    "zips": "tsx pipeline/zip-centroids.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "dev": "npm run data && npm --prefix web run dev",
+    "build": "npm run data && npm --prefix web run build",
+    "data:store": "tsx pipeline/data.ts store",
+    "store:check": "tsx pipeline/store.ts --check",
+    "compile:store": "tsx pipeline/run.ts",
+    "inspect": "tsx pipeline/inspect.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.3.0",
+    "dotenv": "18.0.9",
+    "p-limit": "7.3.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}
