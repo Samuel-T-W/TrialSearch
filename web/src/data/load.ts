@@ -6,7 +6,7 @@ import type { ZipTable } from "../matcher";
  * cross-origin: these are static files served beside index.html.
  */
 export async function loadBundle(lang: Lang): Promise<Bundle> {
-  const res = await fetch(`data/trials.${lang}.json`, { cache: "force-cache" });
+  const res = await fetch(`data/trials.${lang}.json`, { cache: "no-cache" });
   if (!res.ok) {
     // Fall back to English if a language bundle is missing.
     if (lang !== "en") return loadBundle("en");
@@ -20,7 +20,7 @@ export async function loadBundle(lang: Lang): Promise<Bundle> {
  */
 export async function loadZips(): Promise<ZipTable> {
   try {
-    const res = await fetch("data/ma-zips.json", { cache: "force-cache" });
+    const res = await fetch("data/ma-zips.json", { cache: "no-cache" });
     if (res.ok) return (await res.json()) as ZipTable;
   } catch {
     // ZIP data is unavailable.
