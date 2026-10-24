@@ -1,0 +1,232 @@
+{
+  "lang": "en",
+  "generatedAt": "2026-10-24T00:00:00.000Z",
+  "source": "fixture",
+  "questions": [],
+  "trials": [
+    {
+      "nctId": "NCT07589608",
+      "title": {
+        "en": "A new insulin pump program for adults with type 1 diabetes",
+        "es": "Un nuevo programa de bomba de insulina para adultos con diabetes tipo 1"
+      },
+      "summary": {
+        "en": "This study tests an automatic insulin pump that adjusts your dose for you. It is only for type 1 diabetes. You would wear the pump for 6 months.",
+        "es": "Este estudio prueba una bomba de insulina automática que ajusta su dosis por usted. Es solo para diabetes tipo 1. Usaría la bomba durante 6 meses."
+      },
+      "phase": ["NA"],
+      "conditionIds": ["t1d", "t2d"],
+      "healthyVolunteers": false,
+      "ageMin": 18,
+      "ageMax": 75,
+      "sex": "ALL",
+      "sites": [
+        { "facility": "Joslin Diabetes Center", "city": "Boston", "zip": "02215", "lat": 42.3381, "lon": -71.1077 },
+        { "facility": "Baystate Medical Center", "city": "Springfield", "zip": "01199", "lat": 42.121, "lon": -72.6043 }
+      ],
+      "contact": { "name": "Diabetes Research Office", "phone": "617-555-0101", "email": "t1dstudy@example.org" },
+      "checks": [
+        { "id": "NCT07589608#1", "polarity": "include", "kind": "age", "params": { "min": 18, "max": 75 }, "sourceText": "Age 18 to 75 years", "plain": { "en": "You are 18 to 75 years old.", "es": "Tiene entre 18 y 75 años." }, "confidence": "high" },
+        { "id": "NCT07589608#2", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["t1d"] }, "sourceText": "Clinical diagnosis of type 1 diabetes for at least 1 year", "plain": { "en": "You have type 1 diabetes.", "es": "Tiene diabetes tipo 1." }, "confidence": "high" },
+        { "id": "NCT07589608#3", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["t2d"] }, "sourceText": "Diagnosis of type 2 diabetes, monogenic diabetes, or secondary diabetes", "plain": { "en": "You cannot join if you have type 2 diabetes.", "es": "No puede participar si tiene diabetes tipo 2." }, "confidence": "high" },
+        { "id": "NCT07589608#4", "polarity": "include", "kind": "medication", "params": { "medClassIds": ["insulin"] }, "sourceText": "Currently using insulin by multiple daily injections or pump", "plain": { "en": "You use insulin now.", "es": "Usa insulina actualmente." }, "confidence": "high" },
+        { "id": "NCT07589608#5", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pregnant" }, "sourceText": "Pregnant or lactating, or planning pregnancy during the study", "plain": { "en": "You are not pregnant or breastfeeding.", "es": "No está embarazada ni amamantando." }, "confidence": "high" },
+        { "id": "NCT07589608#6", "polarity": "include", "kind": "clinician", "params": { "test": "HbA1c", "min": 6.5, "max": 11 }, "sourceText": "HbA1c between 6.5% and 11.0% at screening", "plain": { "en": "Your HbA1c (3-month blood sugar test) is 6.5% to 11%.", "es": "Su HbA1c (prueba de azúcar de 3 meses) está entre 6.5% y 11%." }, "confidence": "high" }
+      ],
+      "flags": [],
+      "officialUrl": "https://clinicaltrials.gov/study/NCT07589608"
+    },
+    {
+      "nctId": "NCT09900001",
+      "title": {
+        "en": "A once-a-week shot to lower blood sugar in type 2 diabetes",
+        "es": "Una inyección semanal para bajar el azúcar en la sangre en la diabetes tipo 2",
+        "pt": "Uma injeção semanal para baixar o açúcar no sangue no diabetes tipo 2",
+        "ht": "Yon piki chak semèn pou bese sik nan san nan dyabèt tip 2",
+        "zh": "每周一次注射，降低2型糖尿病患者的血糖",
+        "vi": "Mũi tiêm mỗi tuần một lần để hạ đường huyết ở bệnh tiểu đường loại 2"
+      },
+      "summary": {
+        "en": "This study tests a new weekly shot for people with type 2 diabetes who already take metformin. Some people get the new medicine and some get a shot with no medicine. The study lasts about 1 year.",
+        "es": "Este estudio prueba una nueva inyección semanal para personas con diabetes tipo 2 que ya toman metformina. Algunas personas reciben el nuevo medicamento y otras una inyección sin medicamento. El estudio dura aproximadamente 1 año.",
+        "pt": "Este estudo testa uma nova injeção semanal para pessoas com diabetes tipo 2 que já tomam metformina. Algumas pessoas recebem o novo remédio e outras uma injeção sem remédio. O estudo dura cerca de 1 ano.",
+        "ht": "Etid sa a teste yon nouvo piki chak semèn pou moun ki gen dyabèt tip 2 ki deja pran metfòmin. Gen moun ki resevwa nouvo medikaman an, gen lòt ki resevwa yon piki san medikaman. Etid la dire anviwon 1 an.",
+        "zh": "本研究测试一种新的每周注射药物，适用于已在服用二甲双胍的2型糖尿病患者。部分人会使用新药，部分人会使用不含药物的注射剂。研究持续约1年。",
+        "vi": "Nghiên cứu này thử nghiệm một mũi tiêm mới hằng tuần cho người bị tiểu đường loại 2 đang dùng metformin. Một số người nhận thuốc mới, một số người nhận mũi tiêm không có thuốc. Nghiên cứu kéo dài khoảng 1 năm."
+      },
+      "phase": ["PHASE3"],
+      "conditionIds": ["t2d"],
+      "healthyVolunteers": false,
+      "ageMin": 40,
+      "ageMax": 80,
+      "sex": "ALL",
+      "sites": [
+        { "facility": "Mercy Medical Center", "city": "Springfield", "zip": "01104", "lat": 42.115, "lon": -72.58 },
+        { "facility": "UMass Memorial Medical Center", "city": "Worcester", "zip": "01655", "lat": 42.2768, "lon": -71.7621 },
+        { "facility": "Massachusetts General Hospital", "city": "Boston", "zip": "02114", "lat": 42.3631, "lon": -71.0686 }
+      ],
+      "contact": { "name": "Study Coordinator", "phone": "413-555-0102", "email": "weeklyshot@example.org" },
+      "checks": [
+        { "id": "NCT09900001#1", "polarity": "include", "kind": "age", "params": { "min": 40, "max": 80 }, "sourceText": "Age 40 to 80 years", "plain": { "en": "You are 40 to 80 years old.", "es": "Tiene entre 40 y 80 años.", "pt": "Você tem entre 40 e 80 anos.", "ht": "Ou gen ant 40 ak 80 an.", "zh": "您的年龄在40至80岁之间。", "vi": "Bạn từ 40 đến 80 tuổi." }, "confidence": "high" },
+        { "id": "NCT09900001#2", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["t2d"] }, "sourceText": "Diagnosed with type 2 diabetes mellitus at least 180 days before screening", "plain": { "en": "You have type 2 diabetes.", "es": "Tiene diabetes tipo 2.", "pt": "Você tem diabetes tipo 2.", "ht": "Ou gen dyabèt tip 2.", "zh": "您患有2型糖尿病。", "vi": "Bạn bị tiểu đường loại 2." }, "confidence": "high" },
+        { "id": "NCT09900001#3", "polarity": "include", "kind": "medication", "params": { "medClassIds": ["metformin"], "minDays": 90 }, "sourceText": "Stable daily dose of metformin (≥1500 mg or maximum tolerated dose) for at least 90 days", "plain": { "en": "You take metformin every day.", "es": "Toma metformina todos los días.", "pt": "Você toma metformina todos os dias.", "ht": "Ou pran metfòmin chak jou.", "zh": "您每天服用二甲双胍。", "vi": "Bạn uống metformin mỗi ngày." }, "confidence": "high" },
+        { "id": "NCT09900001#4", "polarity": "exclude", "kind": "medication", "params": { "medClassIds": ["insulin", "glp1"], "withinDays": 90 }, "sourceText": "Treatment with insulin or any GLP-1 receptor agonist within 90 days before screening", "plain": { "en": "You have not used insulin or a GLP-1 shot in the last 90 days.", "es": "No ha usado insulina ni una inyección GLP-1 en los últimos 90 días.", "pt": "Você não usou insulina nem injeção de GLP-1 nos últimos 90 dias.", "ht": "Ou pa sèvi ak ensilin oswa piki GLP-1 nan 90 dènye jou yo.", "zh": "您在过去90天内未使用胰岛素或GLP-1注射剂。", "vi": "Bạn chưa dùng insulin hay thuốc tiêm GLP-1 trong 90 ngày qua." }, "confidence": "high" },
+        { "id": "NCT09900001#5", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pancreatitis" }, "sourceText": "History of acute or chronic pancreatitis", "plain": { "en": "You have never had pancreatitis.", "es": "Nunca ha tenido pancreatitis.", "pt": "Você nunca teve pancreatite.", "ht": "Ou pa janm gen pankreyatit.", "zh": "您从未患过胰腺炎。", "vi": "Bạn chưa từng bị viêm tụy." }, "confidence": "high" },
+        { "id": "NCT09900001#6", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_mtc_family" }, "sourceText": "Personal or family history of medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2", "plain": { "en": "No one in your family has had a rare thyroid cancer (MTC or MEN2).", "es": "Nadie en su familia ha tenido un cáncer de tiroides raro (MTC o MEN2).", "pt": "Ninguém na sua família teve um câncer de tireoide raro (MTC ou MEN2).", "ht": "Pèsonn nan fanmi ou pa t janm gen yon kansè tiwoyid ki ra (MTC oswa MEN2).", "zh": "您的家人中没有人患过罕见甲状腺癌（MTC或MEN2）。", "vi": "Không ai trong gia đình bạn từng bị ung thư tuyến giáp hiếm gặp (MTC hoặc MEN2)." }, "confidence": "high" },
+        { "id": "NCT09900001#7", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pregnant" }, "sourceText": "Female who is pregnant, breast-feeding or intends to become pregnant", "plain": { "en": "You are not pregnant or breastfeeding.", "es": "No está embarazada ni amamantando.", "pt": "Você não está grávida nem amamentando.", "ht": "Ou pa ansent epi ou pa bay tete.", "zh": "您没有怀孕或哺乳。", "vi": "Bạn không mang thai hoặc cho con bú." }, "confidence": "high" },
+        { "id": "NCT09900001#8", "polarity": "include", "kind": "clinician", "params": { "test": "HbA1c", "min": 7, "max": 10.5 }, "sourceText": "HbA1c 7.0-10.5% (both inclusive) at screening", "plain": { "en": "Your HbA1c (3-month blood sugar test) is 7% to 10.5%.", "es": "Su HbA1c (prueba de azúcar de 3 meses) está entre 7% y 10.5%.", "pt": "Seu HbA1c (exame de açúcar de 3 meses) está entre 7% e 10,5%.", "ht": "HbA1c ou (tès sik 3 mwa) ant 7% ak 10.5%.", "zh": "您的糖化血红蛋白（3个月血糖检测）在7%至10.5%之间。", "vi": "Chỉ số HbA1c (xét nghiệm đường huyết 3 tháng) của bạn từ 7% đến 10,5%." }, "confidence": "high" },
+        { "id": "NCT09900001#9", "polarity": "exclude", "kind": "clinician", "params": { "test": "eGFR", "max": 30 }, "sourceText": "eGFR <30 mL/min/1.73 m2", "plain": { "en": "Your kidneys work well enough (eGFR 30 or higher).", "es": "Sus riñones funcionan lo suficiente (eGFR de 30 o más).", "pt": "Seus rins funcionam bem o suficiente (eGFR 30 ou mais).", "ht": "Ren ou travay ase byen (eGFR 30 oswa plis).", "zh": "您的肾功能足够好（eGFR为30或以上）。", "vi": "Thận của bạn hoạt động đủ tốt (eGFR từ 30 trở lên)." }, "confidence": "high" }
+      ],
+      "flags": [],
+      "officialUrl": "https://clinicaltrials.gov/study/NCT09900001"
+    },
+    {
+      "nctId": "NCT09900002",
+      "title": {
+        "en": "Healthy eating and walking program for people with diabetes or high weight",
+        "es": "Programa de alimentación sana y caminatas para personas con diabetes o peso alto",
+        "pt": "Programa de alimentação saudável e caminhada para pessoas com diabetes ou peso alto"
+      },
+      "summary": {
+        "en": "This study tests a 6-month coaching program on food and walking, held at community health centers. There is no new medicine. Healthy adults can also join.",
+        "es": "Este estudio prueba un programa de 6 meses de apoyo sobre comida y caminatas en centros de salud comunitarios. No hay medicamento nuevo. También pueden participar adultos sanos.",
+        "pt": "Este estudo testa um programa de 6 meses de orientação sobre alimentação e caminhada em centros de saúde comunitários. Não há remédio novo. Adultos saudáveis também podem participar."
+      },
+      "phase": ["NA"],
+      "conditionIds": ["t2d", "obesity", "prediabetes"],
+      "healthyVolunteers": true,
+      "ageMin": 21,
+      "sex": "ALL",
+      "sites": [
+        { "facility": "Holyoke Health Center", "city": "Holyoke", "zip": "01040", "lat": 42.2005, "lon": -72.6187 },
+        { "facility": "Lowell Community Health Center", "city": "Lowell", "zip": "01852", "lat": 42.6334, "lon": -71.3162 }
+      ],
+      "contact": { "name": "Community Health Research Team", "phone": "413-555-0103" },
+      "checks": [
+        { "id": "NCT09900002#1", "polarity": "include", "kind": "age", "params": { "min": 21 }, "sourceText": "Adults 21 years or older", "plain": { "en": "You are 21 or older.", "es": "Tiene 21 años o más.", "pt": "Você tem 21 anos ou mais." }, "confidence": "high" },
+        { "id": "NCT09900002#2", "polarity": "include", "kind": "question", "params": { "questionId": "q_walk_6min" }, "sourceText": "Unable to walk unassisted for at least 6 minutes", "plain": { "en": "You can walk on your own for 6 minutes.", "es": "Puede caminar solo/a durante 6 minutos.", "pt": "Você consegue caminhar sozinho por 6 minutos." }, "confidence": "low" },
+        { "id": "NCT09900002#3", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_heart_attack_6m" }, "sourceText": "Myocardial infarction or stroke within the past 6 months", "plain": { "en": "You have not had a heart attack or stroke in the last 6 months.", "es": "No ha tenido un ataque al corazón o derrame en los últimos 6 meses.", "pt": "Você não teve infarto ou AVC nos últimos 6 meses." }, "confidence": "high" },
+        { "id": "NCT09900002#4", "polarity": "include", "kind": "unparsed", "params": {}, "sourceText": "Willing to attend at least 75% of sessions per protocol section 6.2", "plain": { "en": "Ask the study team about how many sessions you must attend.", "es": "Pregunte al equipo del estudio cuántas sesiones debe asistir.", "pt": "Pergunte à equipe do estudo quantas sessões você precisa frequentar." }, "confidence": "low" }
+      ],
+      "flags": [],
+      "officialUrl": "https://clinicaltrials.gov/study/NCT09900002"
+    },
+    {
+      "nctId": "NCT09900003",
+      "title": {
+        "en": "A pill to help people with heart failure feel better and stay out of the hospital",
+        "es": "Una pastilla para ayudar a las personas con insuficiencia cardíaca a sentirse mejor y evitar el hospital"
+      },
+      "summary": {
+        "en": "This study tests whether a new daily pill helps people with heart failure. You keep your usual heart medicines. The study lasts about 18 months.",
+        "es": "Este estudio prueba si una nueva pastilla diaria ayuda a las personas con insuficiencia cardíaca. Usted sigue con sus medicamentos habituales para el corazón. El estudio dura unos 18 meses."
+      },
+      "phase": ["PHASE2"],
+      "conditionIds": ["heart_failure"],
+      "healthyVolunteers": false,
+      "ageMin": 18,
+      "sex": "ALL",
+      "sites": [
+        { "facility": "Beth Israel Deaconess Medical Center", "city": "Boston", "zip": "02215", "lat": 42.3388, "lon": -71.1065 },
+        { "facility": "Berkshire Medical Center", "city": "Pittsfield", "zip": "01201", "lat": 42.4568, "lon": -73.2499 }
+      ],
+      "contact": { "name": "Heart Failure Research", "phone": "617-555-0104", "email": "hfstudy@example.org" },
+      "checks": [
+        { "id": "NCT09900003#1", "polarity": "include", "kind": "age", "params": { "min": 18 }, "sourceText": "Age ≥18 years", "plain": { "en": "You are 18 or older.", "es": "Tiene 18 años o más." }, "confidence": "high" },
+        { "id": "NCT09900003#2", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["heart_failure"] }, "sourceText": "Documented diagnosis of chronic heart failure (NYHA class II-IV)", "plain": { "en": "You have heart failure.", "es": "Tiene insuficiencia cardíaca." }, "confidence": "high" },
+        { "id": "NCT09900003#3", "polarity": "include", "kind": "clinician", "params": { "test": "LVEF", "max": 40 }, "sourceText": "LVEF ≤40% within the past 12 months", "plain": { "en": "Your heart pumping strength (ejection fraction) is 40% or less.", "es": "La fuerza de bombeo de su corazón (fracción de eyección) es de 40% o menos." }, "confidence": "high" },
+        { "id": "NCT09900003#4", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_heart_attack_6m" }, "sourceText": "Acute coronary syndrome, stroke or TIA within 6 months prior to enrollment", "plain": { "en": "You have not had a heart attack or stroke in the last 6 months.", "es": "No ha tenido un ataque al corazón o derrame en los últimos 6 meses." }, "confidence": "high" },
+        { "id": "NCT09900003#5", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_other_trial_30d" }, "sourceText": "Participation in another interventional drug trial within 30 days", "plain": { "en": "You have not been in another drug study in the last 30 days.", "es": "No ha estado en otro estudio de medicamentos en los últimos 30 días." }, "confidence": "high" }
+      ],
+      "flags": [],
+      "officialUrl": "https://clinicaltrials.gov/study/NCT09900003"
+    },
+    {
+      "nctId": "NCT09900004",
+      "title": {
+        "en": "A new targeted medicine for advanced breast cancer",
+        "es": "Un nuevo medicamento dirigido para el cáncer de mama avanzado"
+      },
+      "summary": {
+        "en": "This early study tests a new medicine for breast cancer that has spread. The goal is to find a safe dose. Everyone in the study gets the new medicine.",
+        "es": "Este estudio inicial prueba un nuevo medicamento para el cáncer de mama que se ha extendido. El objetivo es encontrar una dosis segura. Todas las personas del estudio reciben el nuevo medicamento."
+      },
+      "phase": ["PHASE1", "PHASE2"],
+      "conditionIds": ["breast_cancer"],
+      "healthyVolunteers": false,
+      "ageMin": 18,
+      "sex": "FEMALE",
+      "sites": [
+        { "facility": "Dana-Farber Cancer Institute", "city": "Boston", "zip": "02215", "lat": 42.3376, "lon": -71.108 }
+      ],
+      "contact": { "name": "Breast Oncology Trials", "phone": "617-555-0105" },
+      "checks": [
+        { "id": "NCT09900004#1", "polarity": "include", "kind": "age", "params": { "min": 18 }, "sourceText": "Age ≥ 18 years", "plain": { "en": "You are 18 or older.", "es": "Tiene 18 años o más." }, "confidence": "high" },
+        { "id": "NCT09900004#2", "polarity": "include", "kind": "sex", "params": { "sex": "FEMALE" }, "sourceText": "Female participants", "plain": { "en": "This study is for women.", "es": "Este estudio es para mujeres." }, "confidence": "high" },
+        { "id": "NCT09900004#3", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["breast_cancer"] }, "sourceText": "Histologically confirmed HR+/HER2- metastatic breast cancer", "plain": { "en": "You have breast cancer that has spread.", "es": "Tiene cáncer de mama que se ha extendido." }, "confidence": "high" },
+        { "id": "NCT09900004#4", "polarity": "exclude", "kind": "medication", "params": { "medClassIds": ["immunotherapy"], "withinDays": 28 }, "sourceText": "Prior anti-PD-1/PD-L1 therapy within 28 days of first dose", "plain": { "en": "You have not had cancer immunotherapy in the last 4 weeks.", "es": "No ha recibido inmunoterapia contra el cáncer en las últimas 4 semanas." }, "confidence": "high" },
+        { "id": "NCT09900004#5", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pregnant" }, "sourceText": "Pregnant or breastfeeding", "plain": { "en": "You are not pregnant or breastfeeding.", "es": "No está embarazada ni amamantando." }, "confidence": "high" },
+        { "id": "NCT09900004#6", "polarity": "exclude", "kind": "unparsed", "params": {}, "sourceText": "Known hypersensitivity to any excipient of the study drug per Investigator's Brochure", "plain": { "en": "Ask the study team about allergies to parts of the study medicine.", "es": "Pregunte al equipo del estudio sobre alergias a componentes del medicamento." }, "confidence": "low" }
+      ],
+      "flags": [],
+      "officialUrl": "https://clinicaltrials.gov/study/NCT09900004"
+    },
+    {
+      "nctId": "NCT09900005",
+      "title": {
+        "en": "A phone app for depression, in English and Spanish",
+        "es": "Una aplicación de teléfono para la depresión, en inglés y español"
+      },
+      "summary": {
+        "en": "This study tests a phone app that teaches skills to manage low mood. You use it for 8 weeks from home. You can keep taking your usual medicines.",
+        "es": "Este estudio prueba una aplicación que enseña habilidades para manejar el ánimo bajo. La usa durante 8 semanas desde casa. Puede seguir tomando sus medicamentos habituales."
+      },
+      "phase": ["NA"],
+      "conditionIds": ["depression"],
+      "healthyVolunteers": false,
+      "ageMin": 18,
+      "ageMax": 70,
+      "sex": "ALL",
+      "sites": [
+        { "facility": "Baystate Behavioral Health", "city": "Springfield", "zip": "01199", "lat": 42.121, "lon": -72.6043 },
+        { "facility": "McLean Hospital", "city": "Belmont", "zip": "02478", "lat": 42.3926, "lon": -71.1923 }
+      ],
+      "contact": { "name": "Mood App Study", "phone": "413-555-0106", "email": "moodapp@example.org" },
+      "checks": [
+        { "id": "NCT09900005#1", "polarity": "include", "kind": "age", "params": { "min": 18, "max": 70 }, "sourceText": "Aged 18-70", "plain": { "en": "You are 18 to 70 years old.", "es": "Tiene entre 18 y 70 años." }, "confidence": "high" },
+        { "id": "NCT09900005#2", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["depression"] }, "sourceText": "Current major depressive episode per DSM-5", "plain": { "en": "You have depression now.", "es": "Tiene depresión actualmente." }, "confidence": "high" },
+        { "id": "NCT09900005#3", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_suicidal_thoughts" }, "sourceText": "Active suicidal ideation in the past 12 months", "plain": { "en": "You have not had thoughts of ending your life in the last year.", "es": "No ha tenido pensamientos de quitarse la vida en el último año." }, "confidence": "high" },
+        { "id": "NCT09900005#4", "polarity": "exclude", "kind": "medication", "params": { "medClassIds": ["antipsychotic"] }, "sourceText": "Current use of antipsychotic medication", "plain": { "en": "You do not take an antipsychotic medicine.", "es": "No toma un medicamento antipsicótico." }, "confidence": "high" },
+        { "id": "NCT09900005#5", "polarity": "include", "kind": "question", "params": { "questionId": "q_smartphone" }, "sourceText": "Owns a smartphone with internet access", "plain": { "en": "You have a smartphone with internet.", "es": "Tiene un teléfono inteligente con internet." }, "confidence": "high" }
+      ],
+      "flags": [],
+      "officialUrl": "https://clinicaltrials.gov/study/NCT09900005"
+    },
+    {
+      "nctId": "NCT09900006",
+      "title": {
+        "en": "A large study of several new COPD treatments",
+        "es": "Un estudio grande de varios tratamientos nuevos para la EPOC"
+      },
+      "summary": {
+        "en": "This study tests several COPD medicines under one shared plan. The rules for who can join are in a separate document. Call the study team to learn more.",
+        "es": "Este estudio prueba varios medicamentos para la EPOC bajo un mismo plan. Las reglas para participar están en otro documento. Llame al equipo del estudio para saber más."
+      },
+      "phase": ["PHASE2"],
+      "conditionIds": ["copd"],
+      "healthyVolunteers": false,
+      "ageMin": 40,
+      "ageMax": 85,
+      "sex": "ALL",
+      "sites": [
+        { "facility": "Brigham and Women's Hospital", "city": "Boston", "zip": "02115", "lat": 42.3358, "lon": -71.1067 }
+      ],
+      "contact": { "name": "COPD Platform Trial", "phone": "617-555-0107" },
+      "checks": [
+        { "id": "NCT09900006#1", "polarity": "include", "kind": "age", "params": { "min": 40, "max": 85 }, "sourceText": "Age 40 to 85 years", "plain": { "en": "You are 40 to 85 years old.", "es": "Tiene entre 40 y 85 años." }, "confidence": "high" }
+      ],
+      "flags": ["master_protocol"],
+      "officialUrl": "https://clinicaltrials.gov/study/NCT09900006"
+    }
+  ]
+}
