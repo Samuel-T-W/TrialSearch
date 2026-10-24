@@ -2,6 +2,6 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    include: ["pipeline/**/*.test.ts", "shared/**/*.test.ts", "web/src/matcher/**/*.test.ts"],
+    include: ["pipeline/**/*.test.ts", "shared/**/*.test.ts", "web/src/matcher/**/*.test.ts", "web/src/journey/**/*.test.ts"],
   },
 });
