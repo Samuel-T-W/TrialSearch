@@ -1,0 +1,39 @@
+{
+  "nctId": "NCT07072039",
+  "title": {
+    "en": "Paramedics who visit your home to treat COPD flare-ups early",
+    "es": "Paramédicos que visitan su casa para tratar los brotes de EPOC a tiempo",
+    "pt": "Paramédicos que visitam sua casa para tratar crises de DPOC cedo",
+    "ht": "Paramedik ki vizite lakay ou pou trete kriz BPKO bonè",
+    "zh": "上门为您早期处理慢阻肺发作的护理人员",
+    "vi": "Nhân viên cấp cứu đến nhà bạn để xử lý sớm các đợt bùng phát COPD"
+  },
+  "summary": {
+    "en": "This study tests a program called PEACE where trained paramedics visit people at home to treat worsening COPD early, working with their doctor. It is a small pilot to see if the program is helpful. It is for adults with moderate to severe COPD.",
+    "es": "Este estudio prueba un programa llamado PEACE donde paramédicos capacitados visitan a las personas en casa para tratar la EPOC que empeora a tiempo, en coordinación con su médico. Es un piloto pequeño para ver si el programa ayuda. Es para adultos con EPOC moderada a grave.",
+    "pt": "Este estudo testa um programa chamado PEACE em que paramédicos treinados visitam as pessoas em casa para tratar a DPOC que piora cedo, trabalhando com o médico. É um piloto pequeno para ver se o programa ajuda. É para adultos com DPOC moderada a grave.",
+    "ht": "Etid sa a teste yon pwogram ki rele PEACE kote paramedik ki fòme vizite moun lakay yo pou trete BPKO ki vin pi mal bonè, an kolaborasyon ak doktè yo. Se yon ti pilòt pou wè si pwogram nan itil. Li pou granmoun ki gen BPKO modere rive grav.",
+    "zh": "本研究测试一个名为PEACE的项目，由受过培训的护理人员上门，配合医生，早期处理加重的慢阻肺。这是一个小型试点，评估项目是否有帮助。适用于中度至重度慢阻肺的成人。",
+    "vi": "Nghiên cứu này thử nghiệm chương trình PEACE, trong đó nhân viên cấp cứu được đào tạo đến nhà để xử lý sớm COPD trở nặng, phối hợp với bác sĩ. Đây là thử nghiệm nhỏ để xem chương trình có hữu ích không. Dành cho người lớn bị COPD trung bình đến nặng."
+  },
+  "phase": ["NA"],
+  "conditionIds": ["copd"],
+  "healthyVolunteers": false,
+  "ageMin": 40,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "University of Massachusetts Chan Medical School", "city": "Worcester", "zip": "01655", "lat": 42.26259, "lon": -71.80229 }
+  ],
+  "contact": { "name": "Laurel O'Connor, MD, MSc", "phone": "508-421-1400", "email": "laurel.oconnor@umassmed.edu" },
+  "checks": [
+    { "id": "NCT07072039#1", "polarity": "include", "kind": "age", "params": { "min": 40 }, "sourceText": "40 years of age or older", "plain": { "en": "You are 40 or older.", "es": "Tiene 40 años o más." }, "confidence": "high" },
+    { "id": "NCT07072039#2", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["copd"] }, "sourceText": "Diagnosis of COPD", "plain": { "en": "You have COPD.", "es": "Tiene EPOC." }, "confidence": "high" },
+    { "id": "NCT07072039#3", "polarity": "include", "kind": "unparsed", "params": {}, "sourceText": "Receives care in the UMass Memorial Medical Center System", "plain": { "en": "You get your care in the UMass Memorial Medical Center system.", "es": "Recibe su atención en el sistema del UMass Memorial Medical Center." }, "confidence": "low" },
+    { "id": "NCT07072039#4", "polarity": "include", "kind": "question", "params": { "questionId": "q_speaks_english" }, "sourceText": "Speaks English", "plain": { "en": "You speak English.", "es": "Habla inglés." }, "confidence": "high" },
+    { "id": "NCT07072039#5", "polarity": "include", "kind": "unparsed", "params": {}, "sourceText": "Resides in the geographical catchment area allowed by the UMass Memorial Medical Center MIH Program's license", "plain": { "en": "You live in the area the home-visit program covers.", "es": "Vive en el área que cubre el programa de visitas a domicilio." }, "confidence": "low" },
+    { "id": "NCT07072039#6", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pregnant" }, "sourceText": "Pregnancy", "plain": { "en": "You are not pregnant.", "es": "No está embarazada." }, "confidence": "high" },
+    { "id": "NCT07072039#7", "polarity": "exclude", "kind": "clinician", "params": { "test": "informed_consent" }, "sourceText": "Cannot provide informed consent", "plain": { "en": "You are able to give your own consent to join.", "es": "Puede dar su propio consentimiento para participar." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT07072039"
+}

@@ -1,0 +1,45 @@
+{
+  "nctId": "NCT05650541",
+  "title": {
+    "en": "A wearable monitor for people with heart failure",
+    "es": "Un monitor portátil para personas con insuficiencia cardíaca",
+    "pt": "Um monitor vestível para pessoas com insuficiência cardíaca",
+    "ht": "Yon monitè ou mete sou ou pou moun ki gen ensifizans kadyak",
+    "zh": "一种用于心力衰竭患者的可穿戴监测仪",
+    "vi": "Một thiết bị theo dõi đeo trên người cho người bị suy tim"
+  },
+  "summary": {
+    "en": "This study tests a wearable monitor called the Sensinel CPM system for people with heart failure. It checks whether the device lowers hospital visits and costs. The device sticks to your chest and sends data to your care team.",
+    "es": "Este estudio prueba un monitor portátil llamado sistema Sensinel CPM para personas con insuficiencia cardíaca. Revisa si el dispositivo reduce las visitas al hospital y los costos. El dispositivo se pega al pecho y envía datos a su equipo de atención.",
+    "pt": "Este estudo testa um monitor vestível chamado sistema Sensinel CPM para pessoas com insuficiência cardíaca. Verifica se o dispositivo reduz as visitas ao hospital e os custos. O dispositivo adere ao peito e envia dados à sua equipe de cuidados.",
+    "ht": "Etid sa a teste yon monitè ou mete sou ou ki rele sistèm Sensinel CPM pou moun ki gen ensifizans kadyak. Li tcheke si aparèy la diminye vizit lopital ak depans. Aparèy la kole sou pwatrin ou epi li voye done bay ekip swen ou.",
+    "zh": "本研究测试一种名为Sensinel CPM系统的可穿戴监测仪，适用于心力衰竭患者。研究检查该设备是否能减少住院次数和费用。设备贴在胸部并将数据发送给您的护理团队。",
+    "vi": "Nghiên cứu này thử nghiệm một thiết bị theo dõi đeo trên người tên là hệ thống Sensinel CPM cho người bị suy tim. Nó kiểm tra xem thiết bị có giảm số lần nhập viện và chi phí hay không. Thiết bị dán vào ngực và gửi dữ liệu cho nhóm chăm sóc của bạn."
+  },
+  "phase": ["NA"],
+  "conditionIds": ["heart_failure"],
+  "healthyVolunteers": false,
+  "ageMin": 18,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "Baystate Medical Center", "city": "Springfield", "zip": "01199", "lat": 42.10148, "lon": -72.58981 }
+  ],
+  "contact": { "name": "Emily Wycallis", "phone": "978-435-1644", "email": "emily.wycallis@analog.com" },
+  "checks": [
+    { "id": "NCT05650541#1", "polarity": "include", "kind": "age", "params": { "min": 18 }, "sourceText": "Under 18 years of age [is an exclusion]", "plain": { "en": "You are 18 or older.", "es": "Tiene 18 años o más." }, "confidence": "high" },
+    { "id": "NCT05650541#2", "polarity": "include", "kind": "sex", "params": { "sex": "ALL" }, "sourceText": "Sex: ALL", "plain": { "en": "This study is open to all sexes.", "es": "Este estudio está abierto a todos los sexos." }, "confidence": "high" },
+    { "id": "NCT05650541#3", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["heart_failure"] }, "sourceText": "Heart failure patients regardless of ejection fraction (HFpEF or HFrEF) with one or more of the following: NYHA Class III HF; NYHA Class IV HF; OR NYHA Class II HF with one or more of: Chronic Kidney Disease (eGFR<60 within the past 6 months), HF hospitalization within 9 months and elevated NT-proBNP, elevated NT-proBNP, or Chronic obstructive pulmonary disease (COPD)", "plain": { "en": "You have heart failure.", "es": "Tiene insuficiencia cardíaca." }, "confidence": "high" },
+    { "id": "NCT05650541#4", "polarity": "exclude", "kind": "clinician", "params": { "test": "COPD_GOLD_stage", "min": 3 }, "sourceText": "Patients with severe COPD (GOLD stage III or IV)", "plain": { "en": "You cannot join if you have severe COPD.", "es": "No puede participar si tiene EPOC grave." }, "confidence": "low" },
+    { "id": "NCT05650541#5", "polarity": "include", "kind": "question", "params": { "questionId": "q_device_help_apply" }, "sourceText": "Limited mobility preventing application of device or no caregiver to assist", "plain": { "en": "You can apply the chest device or have someone to help you.", "es": "Puede colocarse el dispositivo en el pecho o tiene quien le ayude." }, "confidence": "low" },
+    { "id": "NCT05650541#6", "polarity": "include", "kind": "question", "params": { "questionId": "q_device_cognition" }, "sourceText": "Cognitive impairments that would limit the application and proper use of the device", "plain": { "en": "You can understand how to use the chest device.", "es": "Puede entender cómo usar el dispositivo del pecho." }, "confidence": "low" },
+    { "id": "NCT05650541#7", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_silicone_adhesive_allergy" }, "sourceText": "Skin allergies or skin sensitivities to silicone-based adhesives", "plain": { "en": "You are not allergic to silicone-based skin adhesives.", "es": "No es alérgico a los adhesivos de silicona para la piel." }, "confidence": "high" },
+    { "id": "NCT05650541#8", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pregnant" }, "sourceText": "Pregnancy (method of assessment at the discretion of the PI)", "plain": { "en": "You are not pregnant.", "es": "No está embarazada." }, "confidence": "high" },
+    { "id": "NCT05650541#9", "polarity": "include", "kind": "question", "params": { "questionId": "q_shave_chest" }, "sourceText": "Not willing to shave chest hair if needed to apply device", "plain": { "en": "You are willing to shave chest hair if needed for the device.", "es": "Está dispuesto a afeitarse el vello del pecho si es necesario para el dispositivo." }, "confidence": "low" },
+    { "id": "NCT05650541#10", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_iv_inotrope" }, "sourceText": "Patients on chronic IV ionotropic therapy - (Milrinone, Dobutamine, and Dopamine)", "plain": { "en": "You are not on a continuous IV heart medicine drip.", "es": "No recibe un goteo continuo de medicamento cardíaco por vía intravenosa." }, "confidence": "low" },
+    { "id": "NCT05650541#11", "polarity": "exclude", "kind": "clinician", "params": { "note": "survival less than 1 year" }, "sourceText": "Patients with any condition that might limit the survival to less than 1 year as assessed by the investigator", "plain": { "en": "A doctor checks that you are expected to live at least 1 year.", "es": "Un médico verifica que se espera que viva al menos 1 año." }, "confidence": "low" },
+    { "id": "NCT05650541#12", "polarity": "include", "kind": "question", "params": { "questionId": "q_cell_coverage_home" }, "sourceText": "No cellular coverage (Patient's Home)", "plain": { "en": "You have cell phone coverage at home.", "es": "Tiene cobertura de teléfono celular en casa." }, "confidence": "low" },
+    { "id": "NCT05650541#13", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_chest_skin_breakdown" }, "sourceText": "Skin breakdown on the left chest or breast area", "plain": { "en": "You do not have broken skin on your left chest.", "es": "No tiene la piel dañada en el lado izquierdo del pecho." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT05650541"
+}

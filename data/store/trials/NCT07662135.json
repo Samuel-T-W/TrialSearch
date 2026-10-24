@@ -1,0 +1,45 @@
+{
+  "nctId": "NCT07662135",
+  "title": {
+    "en": "A new weekly medicine for type 2 diabetes with kidney problems",
+    "es": "Un nuevo medicamento semanal para la diabetes tipo 2 con problemas renales",
+    "pt": "Um novo remédio semanal para diabetes tipo 2 com problemas nos rins",
+    "ht": "Yon nouvo medikaman chak semèn pou dyabèt tip 2 ak pwoblèm ren",
+    "zh": "一种用于伴有肾脏问题的2型糖尿病的每周新药",
+    "vi": "Một loại thuốc mới dùng hằng tuần cho bệnh tiểu đường loại 2 kèm vấn đề về thận"
+  },
+  "summary": {
+    "en": "This study tests a new medicine called elecoglipron for adults with type 2 diabetes and reduced kidney function. Everyone also takes a kidney-protecting diabetes medicine. Some people get the new medicine and some get a placebo.",
+    "es": "Este estudio prueba un nuevo medicamento llamado elecoglipron para adultos con diabetes tipo 2 y función renal reducida. Todos también toman un medicamento que protege los riñones. Algunos reciben el nuevo medicamento y otros un placebo.",
+    "pt": "Este estudo testa um novo remédio chamado elecoglipron para adultos com diabetes tipo 2 e função renal reduzida. Todos também tomam um remédio que protege os rins. Algumas pessoas recebem o novo remédio e outras um placebo.",
+    "ht": "Etid sa a teste yon nouvo medikaman ki rele elecoglipron pou granmoun ki gen dyabèt tip 2 ak fonksyon ren ki redui. Tout moun pran tou yon medikaman ki pwoteje ren. Gen moun ki resevwa nouvo medikaman an, gen lòt ki resevwa yon plasebo.",
+    "zh": "本研究测试一种名为elecoglipron的新药，适用于患有2型糖尿病且肾功能下降的成人。所有人还服用一种保护肾脏的糖尿病药物。部分人使用新药，部分人使用安慰剂。",
+    "vi": "Nghiên cứu này thử nghiệm một loại thuốc mới tên elecoglipron cho người lớn bị tiểu đường loại 2 và chức năng thận suy giảm. Mọi người cũng dùng một thuốc bảo vệ thận. Một số người nhận thuốc mới, một số nhận giả dược."
+  },
+  "phase": ["PHASE3"],
+  "conditionIds": ["t2d", "ckd"],
+  "healthyVolunteers": false,
+  "ageMin": 18,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "Research Site", "city": "Braintree", "zip": "02184", "lat": 42.20384, "lon": -71.00215 },
+    { "facility": "Research Site", "city": "New Bedford", "zip": "02740", "lat": 41.63526, "lon": -70.92701 },
+    { "facility": "Research Site", "city": "Worcester", "zip": "01604", "lat": 42.26259, "lon": -71.80229 }
+  ],
+  "contact": { "name": "AstraZeneca Clinical Study Information Center", "phone": "1-877-240-9479", "email": "information.center@astrazeneca.com" },
+  "checks": [
+    { "id": "NCT07662135#1", "polarity": "include", "kind": "age", "params": { "min": 18 }, "sourceText": "Minimum Age: 18 Years", "plain": { "en": "You are 18 or older.", "es": "Tiene 18 años o más." }, "confidence": "high" },
+    { "id": "NCT07662135#2", "polarity": "include", "kind": "sex", "params": { "sex": "ALL" }, "sourceText": "Sex: ALL", "plain": { "en": "This study is open to all sexes.", "es": "Este estudio está abierto a todos los sexos." }, "confidence": "high" },
+    { "id": "NCT07662135#3", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["t2d"] }, "sourceText": "Diagnosed with Type 2 Diabetes Mellitus for at least 90 days prior to screening", "plain": { "en": "You have had type 2 diabetes for at least 90 days.", "es": "Tiene diabetes tipo 2 desde hace al menos 90 días." }, "confidence": "high" },
+    { "id": "NCT07662135#4", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["ckd"] }, "sourceText": "Impaired renal function", "plain": { "en": "You have reduced kidney function.", "es": "Tiene la función de los riñones reducida." }, "confidence": "high" },
+    { "id": "NCT07662135#5", "polarity": "include", "kind": "clinician", "params": { "test": "HbA1c", "min": 7.0, "max": 10.5 }, "sourceText": "HbA1c value: On stable dose of SGLT2i ≥ 7.0 % to ≤ 10.5%; SGLT2i-naive ≥ 7.5% to ≤ 10.5%", "plain": { "en": "Your HbA1c (3-month blood sugar test) is in the required range.", "es": "Su HbA1c (prueba de azúcar de 3 meses) está en el rango requerido." }, "confidence": "high" },
+    { "id": "NCT07662135#6", "polarity": "include", "kind": "clinician", "params": { "test": "BMI", "min": 23 }, "sourceText": "Body mass index (BMI) of ≥ 23 kg/m2 at screening", "plain": { "en": "Your body mass index (BMI) is 23 or higher.", "es": "Su índice de masa corporal (IMC) es de 23 o más." }, "confidence": "high" },
+    { "id": "NCT07662135#7", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["t1d"] }, "sourceText": "Type 1 Diabetes, secondary forms of diabetes (including congenital forms), or history of ketoacidosis or hyperosmolar coma", "plain": { "en": "You cannot join if you have type 1 diabetes.", "es": "No puede participar si tiene diabetes tipo 1." }, "confidence": "high" },
+    { "id": "NCT07662135#8", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_severe_hypo" }, "sourceText": "Have had more than one episode of severe hypoglycemia within 180 days prior to screening or has a history of hypoglycemia unawareness or poor recognition of hypoglycemic symptoms", "plain": { "en": "You have not had more than one severe low blood sugar episode.", "es": "No ha tenido más de un episodio de azúcar muy baja en la sangre." }, "confidence": "low" },
+    { "id": "NCT07662135#9", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pancreatitis" }, "sourceText": "History of acute or chronic pancreatitis", "plain": { "en": "You have never had pancreatitis.", "es": "Nunca ha tenido pancreatitis." }, "confidence": "high" },
+    { "id": "NCT07662135#10", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["heart_failure"] }, "sourceText": "Severe congestive heart failure (New York Heart Association IV)", "plain": { "en": "You cannot join if you have severe heart failure.", "es": "No puede participar si tiene insuficiencia cardíaca grave." }, "confidence": "low" },
+    { "id": "NCT07662135#11", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_mtc_family" }, "sourceText": "History/family history of medullary thyroid cancer or multiple endocrine neoplasia type 2", "plain": { "en": "No one in your family has had a rare thyroid cancer (MTC or MEN2).", "es": "Nadie en su familia ha tenido un cáncer de tiroides raro (MTC o MEN2)." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT07662135"
+}

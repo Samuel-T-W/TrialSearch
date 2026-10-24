@@ -1,0 +1,45 @@
+{
+  "nctId": "NCT06856174",
+  "title": {
+    "en": "Hormone therapy for hot flashes in women living with HIV",
+    "es": "Terapia hormonal para los sofocos en mujeres que viven con VIH",
+    "pt": "Terapia hormonal para ondas de calor em mulheres que vivem com HIV",
+    "ht": "Terapi òmòn pou chalè toudenkou nan fanm k ap viv ak VIH",
+    "zh": "针对感染艾滋病毒女性潮热的激素治疗",
+    "vi": "Liệu pháp hormone cho cơn bốc hỏa ở phụ nữ nhiễm HIV"
+  },
+  "summary": {
+    "en": "This study tests whether hormone therapy (estradiol, with or without progesterone) helps hot flashes and night sweats in women living with HIV who are in or near menopause. It also looks at mood, sleep, bones, and heart health.",
+    "es": "Este estudio prueba si la terapia hormonal (estradiol, con o sin progesterona) ayuda con los sofocos y sudores nocturnos en mujeres que viven con VIH que están en la menopausia o cerca de ella. También observa el ánimo, el sueño, los huesos y la salud del corazón.",
+    "pt": "Este estudo testa se a terapia hormonal (estradiol, com ou sem progesterona) ajuda com ondas de calor e suores noturnos em mulheres que vivem com HIV que estão na menopausa ou perto dela. Também avalia humor, sono, ossos e saúde do coração.",
+    "ht": "Etid sa a teste si terapi òmòn (estradyòl, ak oswa san pwojestewòn) ede ak chalè toudenkou ak swe lannwit nan fanm k ap viv ak VIH ki nan menopòz oswa prè li. Li gade tou imè, dòmi, zo, ak sante kè.",
+    "zh": "本研究测试激素治疗（雌二醇，含或不含孕酮）是否有助于缓解处于或接近更年期、感染艾滋病毒女性的潮热和盗汗。还会观察情绪、睡眠、骨骼和心脏健康。",
+    "vi": "Nghiên cứu này thử nghiệm xem liệu pháp hormone (estradiol, có hoặc không có progesterone) có giúp giảm bốc hỏa và đổ mồ hôi đêm ở phụ nữ nhiễm HIV đang hoặc gần mãn kinh không. Nghiên cứu cũng xem xét tâm trạng, giấc ngủ, xương và sức khỏe tim."
+  },
+  "phase": ["PHASE4"],
+  "conditionIds": ["hiv"],
+  "healthyVolunteers": false,
+  "ageMin": 40,
+  "ageMax": 60,
+  "sex": "FEMALE",
+  "sites": [
+    { "facility": "101 Massachusetts General Hospital (MGH) CRS", "city": "Boston", "zip": "02114", "lat": 42.35843, "lon": -71.05977 },
+    { "facility": "Brigham and Women's Hosp. ACTG CRS (107)", "city": "Boston", "zip": "02115", "lat": 42.35843, "lon": -71.05977 }
+  ],
+  "contact": { "name": "ACTG ClinicalTrials.gov Coordinator", "phone": "301-628-3348", "email": "ACTGCT.gov@dlhcorp.com" },
+  "checks": [
+    { "id": "NCT06856174#1", "polarity": "include", "kind": "age", "params": { "min": 40, "max": 60 }, "sourceText": "Between the ages of 40 and 60 years", "plain": { "en": "You are 40 to 60 years old.", "es": "Tiene entre 40 y 60 años." }, "confidence": "high" },
+    { "id": "NCT06856174#2", "polarity": "include", "kind": "sex", "params": { "sex": "FEMALE" }, "sourceText": "Assigned female sex at birth", "plain": { "en": "This study is for women.", "es": "Este estudio es para mujeres." }, "confidence": "high" },
+    { "id": "NCT06856174#3", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["hiv"] }, "sourceText": "Living with HIV", "plain": { "en": "You have HIV.", "es": "Tiene VIH." }, "confidence": "high" },
+    { "id": "NCT06856174#4", "polarity": "include", "kind": "question", "params": { "questionId": "q_menopause_transition" }, "sourceText": "In the late menopausal transition (perimenopause) or early postmenopause", "plain": { "en": "You are going through menopause or it started recently.", "es": "Está pasando por la menopausia o comenzó hace poco." }, "confidence": "high" },
+    { "id": "NCT06856174#5", "polarity": "include", "kind": "question", "params": { "questionId": "q_hot_flashes" }, "sourceText": "Experiencing hot flashes and/or night sweats", "plain": { "en": "You have hot flashes or night sweats.", "es": "Tiene sofocos o sudores nocturnos." }, "confidence": "high" },
+    { "id": "NCT06856174#6", "polarity": "include", "kind": "question", "params": { "questionId": "q_daily_diary" }, "sourceText": "Willing and able to complete a daily diary", "plain": { "en": "You are willing to fill out a short diary every day.", "es": "Está dispuesto/a a completar un diario breve todos los días." }, "confidence": "high" },
+    { "id": "NCT06856174#7", "polarity": "include", "kind": "medication", "params": { "medClassIds": ["antiretroviral"], "minDays": 365 }, "sourceText": "Receiving antiretrovirals (HIV medication) for more than 1 year", "plain": { "en": "You have taken HIV medicine for more than a year.", "es": "Ha tomado medicamento para el VIH por más de un año." }, "confidence": "high" },
+    { "id": "NCT06856174#8", "polarity": "exclude", "kind": "clinician", "params": { "test": "hormone_therapy_contraindication" }, "sourceText": "Does not have medical condition that would contraindicate hormone therapy", "plain": { "en": "You have no health problem that makes hormone therapy unsafe.", "es": "No tiene un problema de salud que haga insegura la terapia hormonal." }, "confidence": "high" },
+    { "id": "NCT06856174#9", "polarity": "exclude", "kind": "unparsed", "params": {}, "sourceText": "Not taking medications to treat hot flashes", "plain": { "en": "You are not taking medicine to treat hot flashes.", "es": "No está tomando medicamento para tratar los sofocos." }, "confidence": "low" },
+    { "id": "NCT06856174#10", "polarity": "exclude", "kind": "unparsed", "params": {}, "sourceText": "Not taking medications that cannot be combined with hormone therapy", "plain": { "en": "You are not taking medicine that cannot be combined with hormone therapy.", "es": "No está tomando medicamento que no se pueda combinar con la terapia hormonal." }, "confidence": "low" },
+    { "id": "NCT06856174#11", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pregnant" }, "sourceText": "Not pregnant and willing and able to use at least non-hormonal birth control to prevent pregnancy", "plain": { "en": "You are not pregnant and will use non-hormonal birth control.", "es": "No está embarazada y usará un método anticonceptivo no hormonal." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT06856174"
+}

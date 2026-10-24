@@ -1,0 +1,39 @@
+{
+  "nctId": "NCT06846320",
+  "title": {
+    "en": "A new add-on pill for generalized anxiety disorder",
+    "es": "Una nueva pastilla complementaria para el trastorno de ansiedad generalizada",
+    "pt": "Uma nova pílula complementar para o transtorno de ansiedade generalizada",
+    "ht": "Yon nouvo grenn konplemantè pou twoub enkyetid jeneralize",
+    "zh": "一种用于广泛性焦虑症的新型附加药片",
+    "vi": "Một viên thuốc bổ sung mới cho rối loạn lo âu lan tỏa"
+  },
+  "summary": {
+    "en": "This study tests a new pill called ABBV-932 added to the antidepressant you already take for anxiety. Some people get the new pill and some get a placebo. You take it for 6 weeks, with 4 more weeks of follow-up.",
+    "es": "Este estudio prueba una nueva pastilla llamada ABBV-932 agregada al antidepresivo que ya toma para la ansiedad. Algunas personas reciben la pastilla nueva y otras un placebo. La toma durante 6 semanas, con 4 semanas más de seguimiento.",
+    "pt": "Este estudo testa uma nova pílula chamada ABBV-932 adicionada ao antidepressivo que você já toma para a ansiedade. Algumas pessoas recebem a pílula nova e outras um placebo. Você a toma por 6 semanas, com mais 4 semanas de acompanhamento.",
+    "ht": "Etid sa a teste yon nouvo grenn ki rele ABBV-932 ajoute ak antidepresè ou deja pran pou enkyetid. Gen moun ki resevwa nouvo grenn nan, gen lòt ki resevwa yon plasebo. Ou pran li pandan 6 semèn, ak 4 semèn swivi anplis.",
+    "zh": "本研究测试一种名为ABBV-932的新药片，加在您已经服用的抗焦虑抗抑郁药上。部分人服用新药片，部分人服用安慰剂。您服用6周，再随访4周。",
+    "vi": "Nghiên cứu này thử nghiệm một viên thuốc mới tên ABBV-932 bổ sung vào thuốc chống trầm cảm bạn đang dùng để trị lo âu. Một số người nhận thuốc mới, một số người nhận giả dược. Bạn dùng trong 6 tuần, theo dõi thêm 4 tuần."
+  },
+  "phase": ["PHASE2"],
+  "conditionIds": ["anxiety"],
+  "healthyVolunteers": false,
+  "ageMin": 18,
+  "ageMax": 65,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "Elixia - Springfield /ID# 267815", "city": "Springfield", "zip": "01103", "lat": 42.10148, "lon": -72.58981 }
+  ],
+  "contact": { "name": "ABBVIE CALL CENTER", "phone": "844-663-3742", "email": "abbvieclinicaltrials@abbvie.com" },
+  "checks": [
+    { "id": "NCT06846320#1", "polarity": "include", "kind": "age", "params": { "min": 18, "max": 65 }, "sourceText": "18 Years to 65 Years", "plain": { "en": "You are 18 to 65 years old.", "es": "Tiene entre 18 y 65 años." }, "confidence": "high" },
+    { "id": "NCT06846320#2", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["anxiety"] }, "sourceText": "Meet Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR) criteria for generalized anxiety disorder (GAD) confirmed by the Mini International Neuropsychiatric Interview (MINI).", "plain": { "en": "You have generalized anxiety disorder.", "es": "Tiene trastorno de ansiedad generalizada." }, "confidence": "high" },
+    { "id": "NCT06846320#3", "polarity": "include", "kind": "medication", "params": { "medClassIds": ["ssri", "snri", "other_antidepressant"] }, "sourceText": "Currently taking protocol-specified antidepressant therapies (ADT) for GAD with an inadequate response to an adequate dose (per label) and duration (>= 8 weeks) as verified by a baseline Hamilton Anxiety Rating Scale (HAM-A) total score >= 20 and Clinical Global Impression of Severity Scale (CGI-S GAD) >= 4.", "plain": { "en": "You take an antidepressant for anxiety now.", "es": "Toma un antidepresivo para la ansiedad actualmente." }, "confidence": "high" },
+    { "id": "NCT06846320#4", "polarity": "include", "kind": "clinician", "params": { "test": "HAM-A", "min": 20 }, "sourceText": "inadequate response to an adequate dose (per label) and duration (>= 8 weeks) as verified by a baseline Hamilton Anxiety Rating Scale (HAM-A) total score >= 20 and Clinical Global Impression of Severity Scale (CGI-S GAD) >= 4.", "plain": { "en": "Your anxiety is still strong even with treatment.", "es": "Su ansiedad sigue siendo fuerte a pesar del tratamiento." }, "confidence": "high" },
+    { "id": "NCT06846320#5", "polarity": "exclude", "kind": "clinician", "params": { "test": "MADRS", "min": 20 }, "sourceText": "Have a Montgomery-Åsberg Depression Rating Scale (MADRS) score >= 20.", "plain": { "en": "A depression rating test shows your depression is not too high.", "es": "Una prueba de depresión muestra que su depresión no es demasiado alta." }, "confidence": "high" },
+    { "id": "NCT06846320#6", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["depression"] }, "sourceText": "New diagnosis or exacerbation of major depression in the last 6 months.", "plain": { "en": "You have not had a new or worsening major depression in the last 6 months.", "es": "No ha tenido una depresión mayor nueva o que haya empeorado en los últimos 6 meses." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT06846320"
+}

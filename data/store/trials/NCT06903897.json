@@ -1,0 +1,35 @@
+{
+  "nctId": "NCT06903897",
+  "title": {
+    "en": "A program that connects patients with chronic illness to social support",
+    "es": "Un programa que conecta a pacientes con enfermedades crónicas con apoyo social",
+    "pt": "Um programa que conecta pacientes com doenças crônicas a apoio social",
+    "ht": "Yon pwogram ki konekte pasyan ki gen maladi kwonik ak sipò sosyal",
+    "zh": "一个将慢性病患者与社会支持联系起来的项目",
+    "vi": "Một chương trình kết nối bệnh nhân mắc bệnh mạn tính với hỗ trợ xã hội"
+  },
+  "summary": {
+    "en": "This study tests a program called WE CARE that screens for social needs like food or housing and connects you to help, through your family doctor. It is for adults with high blood pressure, diabetes, high cholesterol, or depression, and for children with asthma.",
+    "es": "Este estudio prueba un programa llamado WE CARE que evalúa necesidades sociales como comida o vivienda y lo conecta con ayuda, a través de su médico de familia. Es para adultos con presión alta, diabetes, colesterol alto o depresión, y para niños con asma.",
+    "pt": "Este estudo testa um programa chamado WE CARE que avalia necessidades sociais como comida ou moradia e conecta você à ajuda, por meio do seu médico de família. É para adultos com pressão alta, diabetes, colesterol alto ou depressão, e para crianças com asma.",
+    "ht": "Etid sa a teste yon pwogram ki rele WE CARE ki tcheke bezwen sosyal tankou manje oswa lojman epi konekte ou ak èd, atravè doktè fanmi ou. Li pou granmoun ki gen tansyon wo, dyabèt, kolestewòl wo, oswa depresyon, ak pou timoun ki gen opresyon.",
+    "zh": "本研究测试一个名为WE CARE的项目，通过您的家庭医生筛查食物或住房等社会需求，并为您对接帮助。适用于患有高血压、糖尿病、高胆固醇或抑郁症的成人，以及患哮喘的儿童。",
+    "vi": "Nghiên cứu này thử nghiệm chương trình WE CARE, sàng lọc các nhu cầu xã hội như thực phẩm hay nhà ở và kết nối bạn với sự trợ giúp, thông qua bác sĩ gia đình. Dành cho người lớn bị huyết áp cao, tiểu đường, mỡ máu cao hoặc trầm cảm, và trẻ em bị hen suyễn."
+  },
+  "phase": ["NA"],
+  "conditionIds": ["hypertension", "t2d", "hyperlipidemia", "depression", "asthma"],
+  "healthyVolunteers": true,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "UMass Memorial Medical Center - Hahnemann Campus", "city": "Worcester", "zip": "01605", "lat": 42.26259, "lon": -71.80229 },
+    { "facility": "Family Health Center of Worcester", "city": "Worcester", "zip": "01610", "lat": 42.26259, "lon": -71.80229 },
+    { "facility": "UMass Memorial Medical Center -Benedict Family Medicine Clinic", "city": "Worcester", "zip": "01655", "lat": 42.26259, "lon": -71.80229 }
+  ],
+  "contact": { "name": "Arvin Garg", "phone": "4103363261", "email": "arvin.garg@umassmemorial.org" },
+  "checks": [
+    { "id": "NCT06903897#1", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["hypertension", "t2d", "hyperlipidemia", "depression", "asthma"] }, "sourceText": "Adults and children with diagnosed chronic diseases (hypertension, diabetes mellitus, hyperlipidemia, asthma, or depression) who receive Family Medicine care at one of the study sites.", "plain": { "en": "You have high blood pressure, diabetes, high cholesterol, depression, or asthma.", "es": "Tiene presión alta, diabetes, colesterol alto, depresión o asma." }, "confidence": "high" },
+    { "id": "NCT06903897#2", "polarity": "include", "kind": "unparsed", "params": {}, "sourceText": "who receive Family Medicine care at one of the study sites.", "plain": { "en": "You get your family medicine care at one of the study clinics.", "es": "Recibe su atención de medicina familiar en una de las clínicas del estudio." }, "confidence": "low" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT06903897"
+}
