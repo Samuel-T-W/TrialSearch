@@ -2,68 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+/* RGB channels allow Tailwind opacity modifiers while keeping one token source. */
 :root {
   color-scheme: light;
+  --paper: 246 247 244;
+  --surface: 255 255 255;
+  --ink: 19 34 30;
+  --muted: 90 106 101;
+  --line: 220 227 224;
+  --brand: 20 92 80;
+  --brand-ink: 14 70 61;
+  --brand-soft: 226 240 235;
+  --st-feed: 154 91 0;
+  --st-feed-bg: 252 240 217;
+  --st-qualified: 29 112 68;
+  --st-qualified-bg: 225 243 231;
+  --st-registered: 58 70 166;
+  --st-registered-bg: 231 234 250;
+  --st-archive: 90 106 101;
+  --st-archive-bg: 236 239 238;
+  --st-not-qualified: 168 38 30;
+  --st-not-qualified-bg: 251 230 228;
 }
-
-html,
-body,
-#root {
-  height: 100%;
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: 14 21 19;
+    --surface: 21 32 29;
+    --ink: 228 236 233;
+    --muted: 147 164 159;
+    --line: 38 51 47;
+    --brand: 108 195 174;
+    --brand-ink: 143 214 196;
+    --brand-soft: 26 51 45;
+    --st-feed: 233 182 99;
+    --st-feed-bg: 51 39 15;
+    --st-qualified: 123 211 160;
+    --st-qualified-bg: 20 48 31;
+    --st-registered: 168 177 245;
+    --st-registered-bg: 30 35 70;
+    --st-archive: 169 182 178;
+    --st-archive-bg: 31 40 38;
+    --st-not-qualified: 241 149 141;
+    --st-not-qualified-bg: 58 25 22;
+  }
 }
-
-body {
-  margin: 0;
-  background: #f8fafc;
-  color: #0f172a;
-}
-
-/* Big, one-handed tap targets everywhere. */
-button,
-[role="button"],
-a.tap,
-input,
-select {
-  min-height: 44px;
-}
-
+html, body, #root { min-height: 100%; }
+body { margin: 0; @apply bg-paper font-sans text-base text-ink antialiased; }
+h1, h2, h3 { text-wrap: balance; }
+button, [role="button"], a.tap, input, select { min-height: 44px; }
+button, a, input, select, summary { outline-offset: 4px; }
+:focus-visible { outline: 2px solid rgb(var(--brand)); }
 @layer components {
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-semibold transition active:scale-[0.98];
-  }
-  .btn-primary {
-    @apply btn bg-brand text-white shadow-sm hover:bg-brand-dark;
-  }
-  .btn-secondary {
-    @apply btn border border-slate-300 bg-white text-slate-800 hover:bg-slate-50;
-  }
-  .btn-ghost {
-    @apply btn text-brand-dark hover:bg-brand-light;
-  }
-  .card {
-    @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm;
-  }
-  .chip {
-    @apply inline-flex items-center gap-1 rounded-full bg-brand-light px-3 py-1 text-sm font-medium text-brand-dark;
-  }
-  .field-label {
-    @apply mb-1 block text-sm font-semibold text-slate-700;
-  }
-  .input {
-    @apply w-full rounded-xl border border-slate-300 px-4 py-3 text-base focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30;
-  }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-bold transition; }
+  .btn-primary { @apply btn bg-brand text-surface hover:bg-brand-ink; }
+  .btn-secondary { @apply btn border border-line bg-surface text-ink hover:bg-paper; }
+  .btn-ghost { @apply btn text-brand hover:bg-brand-soft; }
+  .card { @apply rounded-2xl border border-line bg-surface p-5; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full bg-brand-soft px-3 py-1 text-xs text-brand-ink; }
+  .field-label { @apply mb-1 block text-sm font-bold text-ink; }
+  .input { @apply w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink; }
 }
-
-/* Print: show only the summary sheet. */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  body {
-    background: #fff;
-  }
-  .print-sheet {
-    box-shadow: none !important;
-    border: none !important;
-  }
-}
+button:disabled { cursor: not-allowed; }
+.tab-count { font-variant-numeric: tabular-nums; }
+.bottom-tabs { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+.list-content { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+/* Retain the U3 privacy page, without offering persistence in a demo session. */
+.journey-privacy section.card { display: none; }
+.journey-privacy [class*="text-slate-"] { color: rgb(var(--ink)); }
+.journey-privacy [class*="bg-slate-"] { background-color: rgb(var(--paper)); }
+@media (min-width: 1024px) { .list-content { padding-bottom: 24px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+@media print { .no-print { display: none !important; } .print-sheet { box-shadow: none !important; border: none !important; } }
