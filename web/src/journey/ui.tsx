@@ -84,6 +84,12 @@ export function Icon({ name, className = "h-5 w-5" }: { name: string; className?
         <circle cx="12" cy="10" r="2" />
       </>
     ),
+    info: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 11v5M12 8h.01" />
+      </>
+    ),
   };
   return (
     <svg

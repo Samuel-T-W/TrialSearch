@@ -72,5 +72,12 @@ button:disabled { cursor: not-allowed; }
 .journey-privacy [class*="text-slate-"] { color: rgb(var(--ink)); }
 .journey-privacy [class*="bg-slate-"] { background-color: rgb(var(--paper)); }
 @media (min-width: 1024px) { .list-content { padding-bottom: 24px; } }
+/* Save confirmation: backdrop fades, card springs in, icon pops a beat later. */
+.move-backdrop { animation: move-fade 200ms ease-out both; }
+.move-card { animation: move-in 450ms cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+.move-icon { animation: move-pop 500ms 150ms cubic-bezier(0.2, 1.6, 0.4, 1) both; }
+@keyframes move-fade { from { opacity: 0; } }
+@keyframes move-in { from { opacity: 0; transform: translateY(24px) scale(0.85); } }
+@keyframes move-pop { 0% { transform: scale(0); } 60% { transform: scale(1.2); } 100% { transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
 @media print { .no-print { display: none !important; } .print-sheet { box-shadow: none !important; border: none !important; } }
