@@ -5,9 +5,17 @@ import { useStrings } from "../i18n";
 import { feedItems, type Board, type Feed, type Session } from "./board";
 import { Modal } from "./ui";
 
-export function feedName(feed: Feed, lang: Lang) {
+type Translate = (path: string, vars?: Record<string, string | number>) => string;
+
+/**
+ * Display name for a feed. Takes a resolved translator rather than calling
+ * useStrings itself: this is a plain helper used in render and inside map
+ * callbacks, so a hook-named call here (especially a conditional one) would trip
+ * eslint-plugin-react-hooks. Callers already have `t = useStrings(lang)`.
+ */
+export function feedName(feed: Feed, t: Translate) {
   return feed.conditionId === null
-    ? useStrings(lang)("journey.everything")
+    ? t("journey.everything")
     : (conditionById(feed.conditionId)?.label ?? feed.conditionId);
 }
 export function FeedBar({
@@ -55,7 +63,7 @@ export function FeedBar({
               className={`flex min-w-0 flex-1 items-center justify-between gap-2 px-3 py-2 text-sm ${vertical ? "rounded-xl" : "rounded-full border"} ${feedId === feed.id ? `bg-brand-soft font-bold text-brand-ink ${vertical ? "" : "border-brand"}` : `text-muted hover:bg-paper ${vertical ? "" : "border-line bg-surface"}`}`}
               onClick={() => onSelect(feed.id)}
             >
-              <span className={vertical ? "truncate" : "whitespace-nowrap"}>{feedName(feed, lang)}</span>
+              <span className={vertical ? "truncate" : "whitespace-nowrap"}>{feedName(feed, t)}</span>
               <span
                 className="tab-count"
                 aria-label={t("journey.trialCount", { count: feedItems(board, feed).length })}
@@ -66,7 +74,7 @@ export function FeedBar({
             {vertical && feed.id !== "all" && (
               <button
                 className="shrink-0 rounded-lg px-2 text-muted hover:bg-paper"
-                aria-label={t("journey.removeFeed", { name: feedName(feed, lang) })}
+                aria-label={t("journey.removeFeed", { name: feedName(feed, t) })}
                 onClick={() => onRemove(feed.id)}
               >
                 ×
@@ -89,7 +97,7 @@ export function FeedBar({
           className="text-sm text-muted underline decoration-line underline-offset-4"
           onClick={() => onRemove(current.id)}
         >
-          {t("journey.removeFeed", { name: feedName(current, lang) })}
+          {t("journey.removeFeed", { name: feedName(current, t) })}
         </button>
       )}
       {adding && (

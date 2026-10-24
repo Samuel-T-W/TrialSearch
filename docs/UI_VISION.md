@@ -1,7 +1,7 @@
 # UI vision: feeds, per-trial questions, and status tabs
 
-Owner: Samuel. Status: agreed direction, not built yet.
-This replaces the current single intake-then-results flow as the target experience.
+Owner: Samuel. Status: built and shipped (this is the journey UI in `web/src/journey/`).
+It replaced the earlier single intake-then-results flow.
 
 ## Why
 
@@ -32,8 +32,8 @@ The pipeline and matcher matter less to them than the experience, so the front e
    Rules that need a doctor or a lab test stay "to confirm with the study team" and do not block qualifying.
 5. **Register interest.**
    A qualified trial offers a **Register interest** button.
-   Pressing it plays a short "sent" animation (for example a letter going into a mailbox).
-   The trial then moves to the **Registered interest** tab.
+   Pressing it plays a short "sent" confirmation.
+   The trial then moves to the **Interested** tab.
    If the user qualifies but does not register, it stays under Qualified.
 6. **Archive.**
    The user can archive any trial from any tab, including registered ones.
@@ -45,7 +45,7 @@ The pipeline and matcher matter less to them than the experience, so the front e
 |---|---|
 | Feed | Trials where it is still unsure whether the user qualifies |
 | Qualified | Trials the user answered all questions for and qualified |
-| Registered interest | Qualified trials the user sent interest for |
+| Interested | Qualified trials the user sent interest for |
 | Archive | Anything the user archived, plus trials they did not qualify for |
 
 There is no separate "Not qualified" tab.
@@ -56,7 +56,7 @@ A trial the user archived by hand also goes to Archive, tagged with the state it
 
 There are exactly three preset test profiles.
 Each opens in a realistic, lived-in state, not empty:
-- one or two trials already under Registered interest,
+- one or two trials already under Interested,
 - one or two in Qualified,
 - a bunch in the Feed with questions still to answer,
 - in Archive, some the user does not qualify for and at least one they qualify for but archived.
@@ -67,11 +67,12 @@ The starting state is fixed per profile.
 Choices made during a session are not saved.
 Logging out and back in as the same profile resets it to that starting state.
 
-## Make your own profile
+## Make your own profile (not yet shipped)
 
 Next to the preset profiles there is a "Create my own" option.
-It runs a short intake flow (age, sex, ZIP, distance, conditions, medicines, language) to build a profile.
-The matcher then runs that profile against the shipped trials and fills the Feed, starting with no answers, qualified, registered, or archived trials.
+It is shown but disabled in the current UI (the button reads "Coming next").
+When built, it will run a short intake flow (age, sex, ZIP, distance, conditions, medicines, language) to build a profile.
+The matcher then runs that profile against the shipped trials and fills the Feed, starting with no answers, qualified, interested, or archived trials.
 The user then goes through the same flow as any other profile.
 This profile is not saved either; after logging out, the user has to create it again.
 

@@ -251,7 +251,7 @@ export function Shell({
         <TrialList
           items={items}
           tab={tab}
-          title={tab === "feed" ? feedName(feed, lang) : t(`journey.tabs.${tab}`)}
+          title={tab === "feed" ? feedName(feed, t) : t(`journey.tabs.${tab}`)}
           lang={lang}
           openTrial={openTrial}
           onOpen={onOpen}

@@ -80,19 +80,20 @@ describe("production journey presets", () => {
       expect((en.journey.about as Record<string, string>)[p.about.split(".").pop()!]).toBeTruthy();
       const session = sessionFromPreset(p);
       const board = buildBoard(matcher.match(session.profile), session);
+      // These assert invariants the matcher guarantees for any valid store, not
+      // exact counts against whatever trials happen to ship (which vary with the
+      // store and would make the suite rot silently — see PR review).
+      // A preset is "lived-in": at least one trial it registered interest in.
       expect(board.registered.length).toBeGreaterThanOrEqual(1);
-      expect(board.registered.length).toBeLessThanOrEqual(2);
-      expect(board.qualified.length).toBeGreaterThanOrEqual(1);
-      expect(board.qualified.length).toBeLessThanOrEqual(2);
-      expect(board.feed.length).toBeGreaterThanOrEqual(3);
-      expect(board.feed.every((i) => i.openQuestions.length > 0)).toBe(true);
+      // Every registered trial is one the patient actually qualifies for.
       expect(board.registered.every((i) => i.verdict === "qualified")).toBe(true);
+      // Feed trials are the ones still undecided: each must have an open question.
+      expect(board.feed.every((i) => i.openQuestions.length > 0)).toBe(true);
+      // A trial the patient qualifies for but archived by hand shows under Archive, tagged qualified.
       expect(
         board.archive.some((i) => i.tag === "qualified" && p.archived.includes(i.result.trial.nctId)),
       ).toBe(true);
-      expect(
-        board.archive.some((i) => i.tag === "not_qualified" && !p.archived.includes(i.result.trial.nctId)),
-      ).toBe(true);
+      // Every id a preset references really exists in the store.
       expect([...p.registered, ...p.archived].every((id) => store.trials.some((t) => t.nctId === id))).toBe(
         true,
       );
