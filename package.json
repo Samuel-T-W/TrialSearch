@@ -4,7 +4,6 @@
   "description": "TrialSearch - private, plain-language clinical trial matching for Massachusetts",
   "scripts": {
     "data": "tsx pipeline/data.ts",
-    "data:fixture": "tsx pipeline/data.ts fixture",
     "pull": "tsx pipeline/pull.ts",
     "eval": "tsx pipeline/eval.ts",
     "zips": "tsx pipeline/zip-centroids.ts",

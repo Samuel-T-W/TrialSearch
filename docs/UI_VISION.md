@@ -54,11 +54,14 @@ A trial the user archived by hand also goes to Archive, tagged with the state it
 
 ## Test profiles start part-way through
 
-Each preset test profile opens in a realistic, lived-in state, not empty:
+There are exactly three preset test profiles.
+Each opens in a realistic, lived-in state, not empty:
 - one or two trials already under Registered interest,
-- some in Qualified,
-- some in the Feed with questions still to answer,
-- possibly a few in Archive.
+- one or two in Qualified,
+- a bunch in the Feed with questions still to answer,
+- in Archive, some the user does not qualify for and at least one they qualify for but archived.
+
+Each person's details (conditions, medicines, distance, prior answers) are chosen so the real trial data produces that spread.
 
 The starting state is fixed per profile.
 Choices made during a session are not saved.
@@ -79,6 +82,7 @@ On a laptop, use the extra width (for example a list next to the open trial) ins
 
 ## Constraints that still apply
 
+- Only real compiled trials (data/store/trials/, from ClinicalTrials.gov) ship in the app; hand-written or mock trial data is for tests only, even if that means few trials.
 - Matching stays on the device; profiles and answers never leave the browser (see `docs/PRIVACY.md`).
 - "Register interest" is a demo action unless a real contact path is agreed; it must not send personal data anywhere by default.
 - Keep the six languages working.

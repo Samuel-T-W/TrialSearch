@@ -9,7 +9,7 @@ Hackachusetts 2026, Healthcare & biotech, challenge H5.
 
 ```bash
 npm install && npm --prefix web install
-npm run dev          # builds data from DATA_SOURCE, then starts the app on 127.0.0.1
+npm run dev          # builds data from the store, then starts the app on 127.0.0.1
 ```
 
 ## Where the trials live
@@ -20,7 +20,6 @@ Add a trial by dropping a file there. Extra questions go in `data/store/question
 ```bash
 npm run store:check   # validate every store file
 npm run data          # build web/public/data/trials.<lang>.json from the store
-npm run data:fixture  # or use the 7 hand-written demo trials instead
 ```
 
 The build makes no LLM or API calls, and neither does the app.
@@ -34,7 +33,7 @@ Optional: `npm run compile:store` pulls and compiles trials with an LLM (`DEEPSE
 |---|---|
 | `shared/` | zod schemas and vocabulary shared by pipeline and app |
 | `pipeline/` | build-time pull, LLM compile, dedupe, translate, eval |
-| `data/fixtures/` | hand-written compiled trials |
+| `data/fixtures/` | hand-written compiled trials, for tests only |
 | `web/src/matcher/` | pure TS matcher, runs on the device |
 | `web/` | Vite + React app, PWA, Playwright tests |
 | `docs/` | pitch, demo script, privacy, eval report, decisions |

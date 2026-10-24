@@ -1,6 +1,5 @@
 // Turns a list of compiled trials into per-language bundles in web/public/data/.
-// Both data sources (fixture and live pipeline) end here, so the web app
-// never knows or cares where its data came from.
+// Bundles carry live trial data for the web app.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { Bundle, CompiledTrial, LANGS, type Lang, type LocalizedText, type Question } from "../shared/schema";
@@ -17,7 +16,7 @@ function slim(t: LocalizedText, lang: Lang): LocalizedText {
 export function writeBundles(opts: {
   trials: CompiledTrial[];
   questions: Question[];
-  source: "fixture" | "live";
+  source: "live";
   outDir?: string;
 }) {
   const outDir = opts.outDir ?? WEB_DATA_DIR;

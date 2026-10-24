@@ -16,18 +16,14 @@ export async function loadBundle(lang: Lang): Promise<Bundle> {
 }
 
 /**
- * Load the MA ZIP -> [lat, lon] table. The real file (ma-zips.json) is built by
- * the pipeline; if it is not present yet we fall back to a small dev table so
- * the app still works end to end.
+ * Load the MA ZIP -> [lat, lon] table built by the pipeline.
  */
 export async function loadZips(): Promise<ZipTable> {
-  for (const path of ["data/ma-zips.json", "data/ma-zips.dev.json"]) {
-    try {
-      const res = await fetch(path, { cache: "force-cache" });
-      if (res.ok) return (await res.json()) as ZipTable;
-    } catch {
-      // try the next path
-    }
+  try {
+    const res = await fetch("data/ma-zips.json", { cache: "force-cache" });
+    if (res.ok) return (await res.json()) as ZipTable;
+  } catch {
+    // ZIP data is unavailable.
   }
   return {};
 }

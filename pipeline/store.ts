@@ -89,7 +89,7 @@ export function saveToStore(trials: CompiledTrial[], questions: Question[] = [])
 export function buildFromStore() {
   const { trials, questions, errors } = loadStore();
   for (const e of errors) console.error(`  invalid, skipped: ${e}`);
-  if (trials.length === 0) throw new Error("data/store/trials/ has no valid trials. Add some, or run `npm run data:fixture`.");
+  if (trials.length === 0) throw new Error("data/store/trials/ has no valid trials. Add real compiled trials there.");
   const r = writeBundles({ trials, questions, source: "live" });
   console.log(`store: wrote ${r.trialCount} trials to ${r.outDir}${errors.length ? ` (${errors.length} invalid skipped)` : ""}`);
   return r;
