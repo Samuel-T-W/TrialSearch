@@ -7,7 +7,9 @@ import zh from "./zh.json";
 import vi from "./vi.json";
 
 type Strings = typeof en;
-const bundles: Record<Lang, Strings> = { en, es, pt, ht, zh, vi } as Record<Lang, Strings>;
+type DeepPartial<T> = { [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K] };
+// Other languages may lag behind English; missing keys fall back to English in `t`.
+const bundles: Record<Lang, DeepPartial<Strings>> = { en, es, pt, ht, zh, vi };
 
 /** Resolve a dot-path like "results.count" from the strings object. */
 function resolve(obj: unknown, path: string): string {

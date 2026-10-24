@@ -77,7 +77,7 @@ export type Question = z.infer<typeof Question> & { text: LocalizedText };
 export const Bundle = z.object({
   lang: Lang,
   generatedAt: z.string(),
-  source: z.enum(["fixture", "live"]),
+  source: z.literal("live"),
   trials: z.array(CompiledTrial),
   questions: z.array(Question),
 });

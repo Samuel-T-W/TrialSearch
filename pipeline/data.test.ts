@@ -1,4 +1,4 @@
-// data-source switch: the build reads files only and never needs a key.
+// Store-only builds read files and never need an API key.
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -19,11 +19,17 @@ function run(script: string, args: string[], env: Record<string, string | undefi
   }
 }
 
-describe("data switch", () => {
-  it("rejects an unknown DATA_SOURCE", () => {
-    const r = run("pipeline/data.ts", ["nope"], {});
+describe("store-only data builds", () => {
+  it("builds the store trials with no API key, ignoring a leftover DATA_SOURCE", () => {
+    const r = run("pipeline/data.ts", [], { DATA_SOURCE: "fixture" });
+    expect(r.status).toBe(0);
+    expect(r.out).toMatch(/store: wrote \d+ trials/);
+  }, 60_000);
+
+  it("rejects any source other than the store", () => {
+    const r = run("pipeline/data.ts", ["fixture"], {});
     expect(r.status).not.toBe(0);
-    expect(r.err).toMatch(/store.*fixture/);
+    expect(r.err).toContain("Only the store is supported.");
   }, 60_000);
 
   it("store check runs with no API key", () => {
