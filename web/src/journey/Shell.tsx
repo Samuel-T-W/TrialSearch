@@ -1,13 +1,72 @@
-import { Fragment, useState } from "react";
-import { pickLang, type Lang } from "@shared/schema";
+import { Fragment, useState, type CSSProperties, type KeyboardEvent, type PointerEvent } from "react";
+import type { Lang, Question } from "@shared/schema";
+import { TrialPanel } from "./TrialPanel";
+import { DEFAULT_COLUMNS, useColumns } from "./useColumns";
 import { useStrings } from "../i18n";
-import type { Board, Session, Tab } from "./board";
+import type { Board, Session, Tab, Verdict } from "./board";
 import { feedItems } from "./board";
 import { FeedBar, feedName } from "./FeedBar";
 import { TrialList } from "./TrialList";
 import { Avatar, Icon, LanguagePicker, Modal, Wordmark } from "./ui";
 
 const TABS: Tab[] = ["feed", "qualified", "registered", "archive"];
+
+/**
+ * Drag handle on a column edge (desktop only). Drag to resize, arrow keys nudge,
+ * double-click resets. `at` and `onMove` use x in px from the layout's left edge.
+ */
+function Splitter({
+  label,
+  at,
+  onMove,
+  onReset,
+}: {
+  label: string;
+  at: number;
+  onMove: (x: number) => void;
+  onReset: () => void;
+}) {
+  const onPointerDown = (e: PointerEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const el = e.currentTarget;
+    const left = el.parentElement!.getBoundingClientRect().left;
+    el.setPointerCapture(e.pointerId);
+    const move = (ev: globalThis.PointerEvent) => onMove(ev.clientX - left);
+    const up = () => {
+      el.removeEventListener("pointermove", move);
+      el.removeEventListener("pointerup", up);
+      document.body.style.removeProperty("cursor");
+      document.body.style.removeProperty("user-select");
+    };
+    el.addEventListener("pointermove", move);
+    el.addEventListener("pointerup", up);
+    document.body.style.cursor = "col-resize";
+    document.body.style.userSelect = "none";
+  };
+  const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    const step = e.shiftKey ? 50 : 10;
+    if (e.key === "ArrowLeft") onMove(at - step);
+    else if (e.key === "ArrowRight") onMove(at + step);
+    else return;
+    e.preventDefault();
+  };
+  return (
+    <div
+      role="separator"
+      aria-orientation="vertical"
+      aria-label={label}
+      aria-valuenow={Math.round(at)}
+      tabIndex={0}
+      onPointerDown={onPointerDown}
+      onKeyDown={onKeyDown}
+      onDoubleClick={onReset}
+      style={{ left: at - 4 }}
+      className="group absolute inset-y-0 z-10 hidden w-2 cursor-col-resize touch-none lg:block"
+    >
+      <span className="mx-auto block h-full w-0.5 transition-colors group-hover:bg-brand group-focus-visible:bg-brand group-active:bg-brand" />
+    </div>
+  );
+}
 export function Shell({
   session,
   name,
@@ -25,6 +84,10 @@ export function Shell({
   onLanguage,
   onLogout,
   onPrivacy,
+  questions,
+  onPreview,
+  onSave,
+  onRegister,
 }: {
   session: Session;
   name: string;
@@ -42,14 +105,27 @@ export function Shell({
   onLanguage: (lang: Lang) => void;
   onLogout: () => void;
   onPrivacy: () => void;
+  questions: Question[];
+  onPreview: (nctId: string, answers: Record<string, boolean | "unsure">) => Verdict;
+  onSave: (nctId: string, answers: Record<string, boolean | "unsure">) => void;
+  onRegister: (nctId: string) => void;
 }) {
   const t = useStrings(lang);
   const [menu, setMenu] = useState(false);
+  // Shown once per login (Shell remounts on each login), until dismissed.
+  const [notice, setNotice] = useState(true);
+  const sessionNote = (
+    <p className="flex items-start gap-2 rounded-xl bg-st-feed-bg p-3 text-sm font-bold text-st-feed">
+      <Icon name="info" className="mt-0.5 h-4 w-4 shrink-0" />
+      {t("journey.sessionNote")}
+    </p>
+  );
   const feed = session.feeds.find((f) => f.id === feedId) ?? session.feeds[0];
   const items = tab === "feed" ? feedItems(board, feed) : board[tab];
-  const trial = Object.values(board)
+  const openItem = Object.values(board)
     .flat()
-    .find((i) => i.result.trial.nctId === openTrial)?.result.trial;
+    .find((i) => i.result.trial.nctId === openTrial);
+  const { cols, update } = useColumns();
   const feedProps = {
     session,
     board,
@@ -108,7 +184,22 @@ export function Shell({
     </>
   );
   return (
-    <div className="lg:grid lg:h-dvh lg:grid-cols-[260px_400px_minmax(0,1fr)] lg:overflow-hidden">
+    <div
+      className="lg:relative lg:grid lg:h-dvh lg:grid-cols-[var(--col-side)_var(--col-list)_minmax(0,1fr)] lg:overflow-hidden"
+      style={{ "--col-side": `${cols.side}px`, "--col-list": `${cols.list}px` } as CSSProperties}
+    >
+      <Splitter
+        label={t("journey.resizeSidebar")}
+        at={cols.side}
+        onMove={(x) => update({ side: x })}
+        onReset={() => update({ side: DEFAULT_COLUMNS.side })}
+      />
+      <Splitter
+        label={t("journey.resizeList")}
+        at={cols.side + cols.list}
+        onMove={(x) => update({ list: x - cols.side })}
+        onReset={() => update({ list: DEFAULT_COLUMNS.list })}
+      />
       <aside className="hidden flex-col overflow-y-auto border-r border-line bg-surface px-4 py-6 lg:flex">
         <div className="px-2">
           <Wordmark />
@@ -130,9 +221,9 @@ export function Shell({
             </Fragment>
           ))}
         </nav>
+        <div className="mt-5">{sessionNote}</div>
         <div className="mt-auto flex flex-col gap-1 border-t border-line px-2 pt-5">
           {options}
-          <p className="mt-3 text-xs text-muted">{t("journey.sessionNote")}</p>
         </div>
       </aside>
       <main className="list-content flex min-w-0 flex-col lg:overflow-y-auto lg:border-r lg:border-line">
@@ -178,10 +269,21 @@ export function Shell({
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-muted">
               {t("journey.trialPanel")}
             </p>
-            <h2 className="font-display text-2xl">
-              {trial ? pickLang(trial.title, lang).text : t("journey.trialUnavailable")}
-            </h2>
-            <p className="mt-6 rounded-xl bg-brand-soft p-5 text-brand-ink">{t("journey.u2Note")}</p>
+            {openItem ? (
+              <TrialPanel
+                key={openItem.result.trial.nctId}
+                item={openItem}
+                lang={lang}
+                questions={questions}
+                answers={session.profile.answers}
+                registered={session.registered.includes(openItem.result.trial.nctId)}
+                preview={(answers) => onPreview(openItem.result.trial.nctId, answers)}
+                onSave={(answers) => onSave(openItem.result.trial.nctId, answers)}
+                onRegister={() => onRegister(openItem.result.trial.nctId)}
+              />
+            ) : (
+              <h2 className="font-display text-2xl">{t("journey.trialUnavailable")}</h2>
+            )}
           </div>
         ) : (
           <div className="m-auto max-w-sm px-8 py-12 text-center">
@@ -199,6 +301,25 @@ export function Shell({
       >
         {TABS.map((value) => tabButton(value, true))}
       </nav>
+      {notice && (
+        <div
+          role="status"
+          data-testid="session-notice"
+          className="fixed inset-x-4 top-4 z-40 mx-auto flex max-w-md items-start gap-3 rounded-2xl border border-st-feed bg-st-feed-bg p-4 text-st-feed shadow-lg"
+        >
+          <Icon name="info" className="mt-0.5 h-6 w-6 shrink-0" />
+          <div className="min-w-0 flex-1">
+            <p className="font-bold">{t("journey.sessionNoteTitle")}</p>
+            <p className="mt-1 text-sm">{t("journey.sessionNote")}</p>
+          </div>
+          <button
+            className="shrink-0 rounded-lg border border-st-feed px-3 py-1 text-sm font-bold hover:bg-surface"
+            onClick={() => setNotice(false)}
+          >
+            {t("journey.sessionNoteGotIt")}
+          </button>
+        </div>
+      )}
       {menu && (
         <Modal
           title={t("journey.accountMenu")}
@@ -207,7 +328,7 @@ export function Shell({
         >
           <div className="flex flex-col gap-3 p-5">
             {options}
-            <p className="text-sm text-muted">{t("journey.sessionNote")}</p>
+            {sessionNote}
           </div>
         </Modal>
       )}

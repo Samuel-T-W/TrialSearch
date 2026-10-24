@@ -1,10 +1,21 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Bundle, Lang } from "@shared/schema";
 import { createMatcher, type ZipTable } from "./matcher";
 import { loadBundle, loadZips } from "./data/load";
 import { useStrings } from "./i18n";
 import { Privacy } from "./pages/Privacy";
-import { addFeed, buildBoard, removeFeed, type Session, type Tab } from "./journey/board";
+import {
+  addFeed,
+  buildBoard,
+  register,
+  removeFeed,
+  settledBy,
+  verdictOf,
+  type Board,
+  type Session,
+  type Tab,
+} from "./journey/board";
+import { MoveToast, type Move } from "./journey/MoveToast";
 import { sessionFromPreset, type Preset } from "./journey/presets";
 import { Login } from "./journey/Login";
 import { Shell } from "./journey/Shell";
@@ -26,6 +37,8 @@ export default function App() {
   const [privacy, setPrivacy] = useState(false);
   const [error, setError] = useState(false);
   const [retry, setRetry] = useState(0);
+  const [move, setMove] = useState<Move | null>(null);
+  const endMove = useCallback(() => setMove(null), []);
   const pushedTrial = useRef(false);
   const t = useStrings(lang);
 
@@ -108,6 +121,34 @@ export default function App() {
     setTab("feed");
     clearTrial();
   }
+  function previewVerdict(nctId: string, answers: Session["profile"]["answers"]) {
+    if (!matcher || !session) return "unsure" as const;
+    const m = matcher.match({ ...session.profile, answers });
+    const r = [...m.matches, ...m.notAFit].find((x) => x.trial.nctId === nctId);
+    return r ? verdictOf(r) : "not_qualified";
+  }
+  /** Apply a change, then show where the trial landed and go back to the Feed. */
+  function commit(nctId: string, next: Session) {
+    if (!matcher || !board) return;
+    const after: Board = buildBoard(matcher.match(next.profile), next);
+    const tabs = Object.keys(after) as Tab[];
+    const landed = tabs.find((k) => after[k].some((i) => i.result.trial.nctId === nctId)) ?? "archive";
+    const item = after[landed].find((i) => i.result.trial.nctId === nctId);
+    const others = settledBy(board, after).filter((id) => id !== nctId).length;
+    setSession(next);
+    setMove({
+      key: Date.now(),
+      title: item ? (item.result.trial.title[lang] ?? item.result.trial.title.en) : "",
+      tab: landed,
+      tag: item?.tag,
+      others,
+    });
+    selectFeed("all");
+  }
+  function saveAnswers(nctId: string, answers: Session["profile"]["answers"]) {
+    if (!session) return;
+    commit(nctId, { ...session, profile: { ...session.profile, answers: { ...session.profile.answers, ...answers } } });
+  }
   function deleteFeed(id: string) {
     setSession((s) => (s ? removeFeed(s, id) : s));
     if (feedId === id) setFeedId("all");
@@ -153,7 +194,12 @@ export default function App() {
         onLanguage={changeLanguage}
         onLogout={logout}
         onPrivacy={() => setPrivacy(true)}
+        questions={bundle.questions}
+        onPreview={previewVerdict}
+        onSave={saveAnswers}
+        onRegister={(id) => session && commit(id, register(session, id))}
       />
+      {move && <MoveToast move={move} lang={lang} onDone={endMove} />}
       {privacy && (
         <Modal title={t("journey.privacy")} closeLabel={t("journey.close")} onClose={() => setPrivacy(false)}>
           <div className="journey-privacy">

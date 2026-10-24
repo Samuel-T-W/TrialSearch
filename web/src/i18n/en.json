@@ -127,7 +127,7 @@
     "chooseProfile": "Choose a demo profile",
     "login": "Log in",
     "loginAs": "Log in as {name}",
-    "snapshot": "{registered} registered · {qualified} qualified · {feed} to review",
+    "snapshot": "{registered} interested · {qualified} qualified · {feed} to review",
     "create": "Create my own profile",
     "createHint": "Start with your health details and explore trials for you.",
     "comingNext": "Coming next",
@@ -142,20 +142,23 @@
     "privacy": "Privacy",
     "logout": "Log out",
     "sessionNote": "This session is private. Logging out resets your demo profile.",
+    "sessionNoteTitle": "Nothing here is saved",
+    "sessionNoteGotIt": "Got it",
     "patientMeta": "Age {age} · within {miles} mi",
     "navigation": "Trial navigation",
     "accountMenu": "Your account",
     "tabs": {
       "feed": "Feed",
       "qualified": "Qualified",
-      "registered": "Registered",
+      "registered": "Interested",
       "archive": "Archive"
     },
     "tags": {
       "qualified": "Qualified",
       "not_qualified": "Not qualified",
       "unsure": "Unsure",
-      "registered": "Registered"
+      "registered": "Interested",
+      "interestSent": "Interest sent"
     },
     "distance": "{miles} mi",
     "distanceNear": "under 1 mi",
@@ -168,17 +171,35 @@
     "confirmOne": "{count} thing the study team will confirm",
     "confirm": "{count} things the study team will confirm",
     "interestSent": "Interest sent",
+    "questionsTitle": "Questions for this trial",
+    "questionsHint": "Your answers stay on this device. Change one any time.",
+    "verdict": {
+      "unsure": "Answer the questions to see if you may qualify.",
+      "qualified": "You may qualify. The study team will confirm.",
+      "not_qualified": "Based on your answers, you likely cannot join this trial."
+    },
+    "sendInterest": "Send interest",
+    "saveAnswers": "Save answers",
+    "unsaved": "Not saved yet. Save to update your trials.",
+    "moved": {
+      "feed": "Saved. Still in your Feed",
+      "qualified": "Sent to Qualified",
+      "registered": "Sent to Interested",
+      "archive": "Sent to Archive"
+    },
+    "movedOthersOne": "1 other trial updated too",
+    "movedOthers": "{count} other trials updated too",
     "intro": {
       "feed": "A few answers can help you find your next step.",
       "qualified": "Based on your answers. The study team will confirm.",
-      "registered": "Studies you have registered interest in.",
+      "registered": "Studies you have sent interest to.",
       "archive": "Trials set aside, including those that are not a fit."
     },
     "emptyTitle": "All clear for now",
     "empty": {
       "feed": "No trials left to review in this feed. Try another condition feed.",
       "qualified": "Answer the questions on a trial in your Feed to find out if you qualify.",
-      "registered": "Trials you register interest in will appear here.",
+      "registered": "Trials you send interest to will appear here.",
       "archive": "Trials you archive or do not qualify for will appear here."
     },
     "everything": "Everything",
@@ -194,7 +215,9 @@
     "close": "Close",
     "trialPanel": "Trial details",
     "backToList": "Back to trials",
-    "u2Note": "U2 · Trial details and questions are coming in the next update.",
+    "noContact": "No contact is listed. The official trial page has more ways to reach the study team.",
+    "resizeSidebar": "Resize the menu column",
+    "resizeList": "Resize the trial list column",
     "trialUnavailable": "This trial is no longer in your list.",
     "pickTrial": "Pick a trial to see what's left to check",
     "pickHint": "Your answers help you explore whether a study could be a fit.",
