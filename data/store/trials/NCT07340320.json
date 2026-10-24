@@ -1,0 +1,51 @@
+{
+  "nctId": "NCT07340320",
+  "title": {
+    "en": "A new pill (CX11) for type 2 diabetes not controlled by metformin",
+    "es": "Una nueva pastilla (CX11) para la diabetes tipo 2 no controlada con metformina",
+    "pt": "Um novo comprimido (CX11) para diabetes tipo 2 não controlado com metformina",
+    "ht": "Yon nouvo grenn (CX11) pou dyabèt tip 2 ki pa kontwole ak metfòmin",
+    "zh": "一种用于二甲双胍控制不佳的2型糖尿病新药片（CX11）",
+    "vi": "Một viên thuốc mới (CX11) cho bệnh tiểu đường loại 2 không kiểm soát được bằng metformin"
+  },
+  "summary": {
+    "en": "This study tests a new pill called CX11 for people with type 2 diabetes whose blood sugar is still high on metformin. Some people get CX11 and some get a placebo pill. Treatment lasts 24 weeks.",
+    "es": "Este estudio prueba una nueva pastilla llamada CX11 para personas con diabetes tipo 2 cuyo azúcar sigue alto con metformina. Algunas personas reciben CX11 y otras una pastilla sin medicamento. El tratamiento dura 24 semanas.",
+    "pt": "Este estudo testa um novo comprimido chamado CX11 para pessoas com diabetes tipo 2 cujo açúcar continua alto com metformina. Algumas pessoas recebem CX11 e outras um comprimido sem remédio. O tratamento dura 24 semanas.",
+    "ht": "Etid sa a teste yon nouvo grenn ki rele CX11 pou moun ki gen dyabèt tip 2 ki gen sik ki toujou wo ak metfòmin. Gen moun ki resevwa CX11, gen lòt ki resevwa yon grenn san medikaman. Tretman an dire 24 semèn.",
+    "zh": "本研究测试一种名为CX11的新药片，适用于服用二甲双胍后血糖仍高的2型糖尿病患者。部分人使用CX11，部分人使用安慰剂药片。治疗持续24周。",
+    "vi": "Nghiên cứu này thử nghiệm một viên thuốc mới tên CX11 cho người bị tiểu đường loại 2 vẫn còn đường huyết cao khi dùng metformin. Một số người nhận CX11, một số nhận viên giả dược. Điều trị kéo dài 24 tuần."
+  },
+  "phase": ["PHASE2"],
+  "conditionIds": ["t2d"],
+  "healthyVolunteers": false,
+  "ageMin": 18,
+  "ageMax": 75,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "Elixia Health - Springfield - Elixia - PPDS", "city": "Springfield", "zip": "01103", "lat": 42.10148, "lon": -72.58981 }
+  ],
+  "contact": { "name": "Study Coordinator", "phone": "201-268-3723", "email": "information.center@corxelbio.com" },
+  "checks": [
+    { "id": "NCT07340320#1", "polarity": "include", "kind": "age", "params": { "min": 18, "max": 75 }, "sourceText": "Adults aged 18 to 75.", "plain": { "en": "You are 18 to 75 years old.", "es": "Tiene entre 18 y 75 años." }, "confidence": "high" },
+    { "id": "NCT07340320#2", "polarity": "include", "kind": "sex", "params": { "sex": "ALL" }, "sourceText": "Sex: ALL", "plain": { "en": "This study is open to all sexes.", "es": "Este estudio está abierto a todos los sexos." }, "confidence": "high" },
+    { "id": "NCT07340320#3", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["t2d"] }, "sourceText": "Diagnosis of type 2 diabetes for at least 6 months.", "plain": { "en": "You have had type 2 diabetes for at least 6 months.", "es": "Tiene diabetes tipo 2 desde hace al menos 6 meses." }, "confidence": "high" },
+    { "id": "NCT07340320#4", "polarity": "include", "kind": "clinician", "params": { "test": "HbA1c", "min": 7.0, "max": 10.5 }, "sourceText": "HbA1c between 7.0% and 10.5%.", "plain": { "en": "Your HbA1c (3-month blood sugar test) is 7% to 10.5%.", "es": "Su HbA1c (prueba de azúcar de 3 meses) está entre 7% y 10.5%." }, "confidence": "high" },
+    { "id": "NCT07340320#5", "polarity": "include", "kind": "clinician", "params": { "test": "BMI", "min": 23, "max": 50 }, "sourceText": "Body mass index (BMI) between 23 and 50 kg/m².", "plain": { "en": "Your body mass index (BMI) is 23 to 50.", "es": "Su índice de masa corporal (IMC) está entre 23 y 50." }, "confidence": "high" },
+    { "id": "NCT07340320#6", "polarity": "include", "kind": "medication", "params": { "medClassIds": ["metformin"], "minDays": 90 }, "sourceText": "Stable dose of metformin (≥1000 mg/day), with or without SGLT2i, for ≥3 months.", "plain": { "en": "You take metformin every day.", "es": "Toma metformina todos los días." }, "confidence": "high" },
+    { "id": "NCT07340320#7", "polarity": "exclude", "kind": "medication", "params": { "medClassIds": ["systemic_steroid", "thyroid"] }, "sourceText": "Anticipated initiation or change in concomitant medications (for more than 14 consecutive days) known to affect weight or glucose metabolism (e.g. treatment with orlistat, thyroid hormones, or systemic corticosteroids).", "plain": { "en": "You are not starting or changing steroids or thyroid medicine.", "es": "No está comenzando ni cambiando esteroides o medicamento para la tiroides." }, "confidence": "low" },
+    { "id": "NCT07340320#8", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["t1d"] }, "sourceText": "Type 1 diabetes or a history of diabetic ketoacidosis.", "plain": { "en": "You cannot join if you have type 1 diabetes.", "es": "No puede participar si tiene diabetes tipo 1." }, "confidence": "high" },
+    { "id": "NCT07340320#9", "polarity": "exclude", "kind": "medication", "params": { "medClassIds": ["glp1"], "withinDays": 180 }, "sourceText": "Use of any GLP-1 receptor agonist within the past 6 months, or any prior exposure to CX11.", "plain": { "en": "You have not used a GLP-1 medicine in the last 6 months.", "es": "No ha usado un medicamento GLP-1 en los últimos 6 meses." }, "confidence": "high" },
+    { "id": "NCT07340320#10", "polarity": "exclude", "kind": "medication", "params": { "medClassIds": ["insulin"], "withinDays": 365 }, "sourceText": "Use of insulin to control blood sugar within the past 12 months.", "plain": { "en": "You have not used insulin in the last 12 months.", "es": "No ha usado insulina en los últimos 12 meses." }, "confidence": "high" },
+    { "id": "NCT07340320#11", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_severe_hypo" }, "sourceText": "More than one episode of severe low blood sugar, with awareness of hypoglycemia symptoms.", "plain": { "en": "You have not had more than one severe low blood sugar episode.", "es": "No ha tenido más de un episodio de azúcar muy baja en la sangre." }, "confidence": "low" },
+    { "id": "NCT07340320#12", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_heart_attack_6m" }, "sourceText": "Cardiovascular or cerebrovascular conditions within the past 6 months: Heart attack, coronary angioplasty, or bypass surgery; valvular heart disease; unstable angina; transient ischemic attack (TIA) or stroke; decompensated heart failure (NYHA Class III or IV).", "plain": { "en": "You have not had a heart attack or stroke in the last 6 months.", "es": "No ha tenido un ataque al corazón o derrame en los últimos 6 meses." }, "confidence": "low" },
+    { "id": "NCT07340320#13", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pancreatitis" }, "sourceText": "Pancreatic or gallbladder conditions: Acute or chronic pancreatitis.", "plain": { "en": "You have never had pancreatitis.", "es": "Nunca ha tenido pancreatitis." }, "confidence": "high" },
+    { "id": "NCT07340320#14", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_mtc_family" }, "sourceText": "Personal or first-degree family history of medullary thyroid carcinoma or multiple endocrine neoplasia (MEN) type 2A or 2B.", "plain": { "en": "No one in your family has had a rare thyroid cancer (MTC or MEN2).", "es": "Nadie en su familia ha tenido un cáncer de tiroides raro (MTC o MEN2)." }, "confidence": "high" },
+    { "id": "NCT07340320#15", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_cancer_5y" }, "sourceText": "Malignancy within the past 5 years, regardless of recurrence or metastasis. Exceptions: localized basal cell skin cancer, low-risk prostate cancer, cervical carcinoma in situ, or high-grade prostatic intraepithelial neoplasia.", "plain": { "en": "You have not been treated for most cancers in the last 5 years.", "es": "No ha recibido tratamiento para la mayoría de los cánceres en los últimos 5 años." }, "confidence": "high" },
+    { "id": "NCT07340320#16", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["crohns", "ulcerative_colitis"] }, "sourceText": "Crohn's disease, ulcerative colitis, or other inflammatory bowel diseases.", "plain": { "en": "You cannot join if you have Crohn's disease or ulcerative colitis.", "es": "No puede participar si tiene enfermedad de Crohn o colitis ulcerosa." }, "confidence": "high" },
+    { "id": "NCT07340320#17", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["hepatitis_b", "hepatitis_c"] }, "sourceText": "Chronic active hepatitis B or C.", "plain": { "en": "You cannot join if you have active hepatitis B or C.", "es": "No puede participar si tiene hepatitis B o C activa." }, "confidence": "high" },
+    { "id": "NCT07340320#18", "polarity": "exclude", "kind": "clinician", "params": { "test": "eGFR", "max": 60 }, "sourceText": "eGFR < 60 mL/min/1.73 m² (CKD-EPI).", "plain": { "en": "Your kidneys work well enough (eGFR 60 or higher).", "es": "Sus riñones funcionan lo suficiente (eGFR de 60 o más)." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT07340320"
+}

@@ -1,0 +1,42 @@
+{
+  "nctId": "NCT07351045",
+  "title": {
+    "en": "A once-a-week shot for weight loss in adults without diabetes",
+    "es": "Una inyección semanal para bajar de peso en adultos sin diabetes",
+    "pt": "Uma injeção semanal para perda de peso em adultos sem diabetes",
+    "ht": "Yon piki chak semèn pou pèdi pwa nan granmoun ki pa gen dyabèt",
+    "zh": "一种每周一次的减重注射剂，适用于无糖尿病的成人",
+    "vi": "Một mũi tiêm mỗi tuần một lần để giảm cân cho người lớn không bị tiểu đường"
+  },
+  "summary": {
+    "en": "This study tests a new weekly shot called enicepatide for weight loss in adults with obesity or overweight who do not have type 2 diabetes. Some people get the medicine and some get a placebo shot. You give yourself the shot each week.",
+    "es": "Este estudio prueba una nueva inyección semanal llamada enicepatida para bajar de peso en adultos con obesidad o sobrepeso que no tienen diabetes tipo 2. Algunos reciben el medicamento y otros una inyección sin medicamento. Usted se pone la inyección cada semana.",
+    "pt": "Este estudo testa uma nova injeção semanal chamada enicepatida para perda de peso em adultos com obesidade ou sobrepeso que não têm diabetes tipo 2. Algumas pessoas recebem o remédio e outras uma injeção sem remédio. Você mesmo aplica a injeção toda semana.",
+    "ht": "Etid sa a teste yon nouvo piki chak semèn ki rele enicepatide pou pèdi pwa nan granmoun ki gen obezite oswa twòp pwa ki pa gen dyabèt tip 2. Gen moun ki resevwa medikaman an, gen lòt ki resevwa yon piki san medikaman. Ou bay tèt ou piki a chak semèn.",
+    "zh": "本研究测试一种名为enicepatide的新每周注射剂，用于无2型糖尿病的肥胖或超重成人减重。部分人使用药物，部分人使用安慰剂注射。您每周自行注射。",
+    "vi": "Nghiên cứu này thử nghiệm một mũi tiêm mới hằng tuần tên enicepatide để giảm cân cho người lớn béo phì hoặc thừa cân không bị tiểu đường loại 2. Một số người nhận thuốc, một số nhận mũi tiêm giả dược. Bạn tự tiêm mỗi tuần."
+  },
+  "phase": ["PHASE3"],
+  "conditionIds": ["obesity"],
+  "healthyVolunteers": false,
+  "ageMin": 18,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "Boston Medical Center", "city": "Boston", "zip": "02118", "lat": 42.35843, "lon": -71.05977 },
+    { "facility": "Knownwell", "city": "Needham", "zip": "02492", "lat": 42.28343, "lon": -71.23283 }
+  ],
+  "contact": { "name": "Reference Study ID Number: WC45725 https://forpatients.roche.com/ No attachments to email below.", "phone": "888-662-6728 (U.S. Only)", "email": "global-roche-genentech-trials@gene.com" },
+  "checks": [
+    { "id": "NCT07351045#1", "polarity": "include", "kind": "age", "params": { "min": 18 }, "sourceText": "Minimum Age: 18 Years", "plain": { "en": "You are 18 or older.", "es": "Tiene 18 años o más." }, "confidence": "high" },
+    { "id": "NCT07351045#2", "polarity": "include", "kind": "sex", "params": { "sex": "ALL" }, "sourceText": "Sex: ALL", "plain": { "en": "This study is open to all sexes.", "es": "Este estudio está abierto a todos los sexos." }, "confidence": "high" },
+    { "id": "NCT07351045#3", "polarity": "include", "kind": "clinician", "params": { "test": "BMI", "min": 27 }, "sourceText": "Body mass index (BMI) greater than or equal to (≥)30.0 kg/m^2; or BMI ≥27.0 kg/m^2 and <30.0 kg/m^2 with at least one weight-related comorbidity, such as prediabetes, hypertension, dyslipidemia, diagnosis of obstructive sleep apnea, or weight-related cardiovascular disease", "plain": { "en": "Your body mass index (BMI) is 27 or higher.", "es": "Su índice de masa corporal (IMC) es de 27 o más." }, "confidence": "high" },
+    { "id": "NCT07351045#4", "polarity": "include", "kind": "question", "params": { "questionId": "q_tried_diet_exercise" }, "sourceText": "History of ≥1 self-reported unsuccessful diet/exercise effort to lose body weight", "plain": { "en": "You have tried to lose weight with diet or exercise before.", "es": "Ha intentado bajar de peso con dieta o ejercicio antes." }, "confidence": "low" },
+    { "id": "NCT07351045#5", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["t1d", "t2d"] }, "sourceText": "History of Type 1 diabetes mellitus (T1DM) or T2DM, or history of ketoacidosis or hyperosmolar state/coma. Prior, but not current, diagnosis of gestational diabetes is allowed if no history of diabetes is recorded since.", "plain": { "en": "You cannot join if you have type 1 or type 2 diabetes.", "es": "No puede participar si tiene diabetes tipo 1 o tipo 2." }, "confidence": "high" },
+    { "id": "NCT07351045#6", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_weight_loss_surgery" }, "sourceText": "Prior or planned surgical treatment for obesity. Liposuction or abdominoplasty if performed more than 1 year prior to screening is allowed.", "plain": { "en": "You have not had and do not plan weight loss surgery.", "es": "No ha tenido ni planea una cirugía para bajar de peso." }, "confidence": "low" },
+    { "id": "NCT07351045#7", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_pancreatitis" }, "sourceText": "History of acute or chronic pancreatitis or clinically significant gallbladder disease. History of acute pancreatitis caused by gallstones or clinically significant gallbladder disease is allowed if the participant had a cholecystectomy to resolve the problem at least 3 months prior to screening.", "plain": { "en": "You have never had pancreatitis.", "es": "Nunca ha tenido pancreatitis." }, "confidence": "low" },
+    { "id": "NCT07351045#8", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_heart_attack_3m" }, "sourceText": "Any of the following cardiovascular conditions within 3 months prior to screening: Acute myocardial infarction; Cerebrovascular accident (stroke)/transient ischemic attack; Unstable angina; Hospitalization due to congestive heart failure.", "plain": { "en": "You have not had a heart attack or stroke in the last 3 months.", "es": "No ha tenido un ataque al corazón o derrame en los últimos 3 meses." }, "confidence": "high" },
+    { "id": "NCT07351045#9", "polarity": "exclude", "kind": "medication", "params": { "medClassIds": ["glp1"], "withinDays": 180 }, "sourceText": "Treatment with any approved or investigational GLP-1-RA-based therapy (e.g., GLP-1 receptor mono agonist, GLP-1/GIP receptor dual agonist, GLP-1/GIP/Gluc receptor triple agonist) within 6 months prior to randomization", "plain": { "en": "You have not used a GLP-1 medicine in the last 6 months.", "es": "No ha usado un medicamento GLP-1 en los últimos 6 meses." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT07351045"
+}

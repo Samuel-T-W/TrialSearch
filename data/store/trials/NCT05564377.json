@@ -1,0 +1,40 @@
+{
+  "nctId": "NCT05564377",
+  "title": {
+    "en": "Gene testing to match advanced cancer to a treatment study",
+    "es": "Pruebas genéticas para asignar el cáncer avanzado a un estudio de tratamiento",
+    "pt": "Teste genético para encaminhar o câncer avançado a um estudo de tratamento",
+    "ht": "Tès jenetik pou mete kansè avanse ak yon etid tretman",
+    "zh": "通过基因检测为晚期癌症匹配治疗研究",
+    "vi": "Xét nghiệm gen để ghép bệnh ung thư giai đoạn muộn với một nghiên cứu điều trị"
+  },
+  "summary": {
+    "en": "This screening study uses gene testing of your tumor to find a cancer treatment study that may fit you. It is for solid tumors that have spread and grown after other treatment. If a match is found, you may join a related treatment trial.",
+    "es": "Este estudio de detección usa pruebas genéticas de su tumor para encontrar un estudio de tratamiento que pueda ajustarse a usted. Es para tumores sólidos que se han extendido y crecido después de otro tratamiento. Si se encuentra una coincidencia, puede participar en un estudio de tratamiento relacionado.",
+    "pt": "Este estudo de triagem usa teste genético do seu tumor para encontrar um estudo de tratamento que possa servir para você. É para tumores sólidos que se espalharam e cresceram após outro tratamento. Se houver correspondência, você pode entrar em um estudo de tratamento relacionado.",
+    "ht": "Etid depistaj sa a sèvi ak tès jenetik timè ou pou jwenn yon etid tretman ki ka bon pou ou. Li pou timè solid ki gaye epi grandi apre lòt tretman. Si yo jwenn yon match, ou ka antre nan yon etid tretman ki gen rapò.",
+    "zh": "这项筛查研究通过对您肿瘤的基因检测，为您寻找合适的癌症治疗研究。适用于在其他治疗后扩散并进展的实体瘤。如果找到匹配，您可以参加相关的治疗试验。",
+    "vi": "Nghiên cứu sàng lọc này dùng xét nghiệm gen khối u của bạn để tìm một nghiên cứu điều trị phù hợp. Dành cho khối u đặc đã lan rộng và tiến triển sau khi điều trị khác. Nếu tìm được phù hợp, bạn có thể tham gia một thử nghiệm điều trị liên quan."
+  },
+  "phase": ["PHASE2"],
+  "conditionIds": ["solid_tumor", "breast_cancer", "ovarian_cancer", "endometrial_cancer"],
+  "healthyVolunteers": false,
+  "sex": "ALL",
+  "sites": [
+    { "facility": "Tufts Medical Center", "city": "Boston", "zip": "02111", "lat": 42.35843, "lon": -71.05977 },
+    { "facility": "Beth Israel Deaconess Medical Center", "city": "Boston", "zip": "02215", "lat": 42.35843, "lon": -71.05977 },
+    { "facility": "Dana-Farber Cancer Institute", "city": "Boston", "zip": "02215", "lat": 42.35843, "lon": -71.05977 },
+    { "facility": "Baystate Medical Center", "city": "Springfield", "zip": "01199", "lat": 42.10148, "lon": -72.58981 },
+    { "facility": "Tufts Medical Center Cancer Center Stoneham", "city": "Stoneham", "zip": "02180", "lat": 42.4801, "lon": -71.0995 }
+  ],
+  "checks": [
+    { "id": "NCT05564377#1", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["solid_tumor"] }, "sourceText": "Patients must have locally advanced or advanced histologically documented solid tumors requiring therapy", "plain": { "en": "You have an advanced solid tumor that needs treatment.", "es": "Tiene un tumor sólido avanzado que necesita tratamiento." }, "confidence": "high" },
+    { "id": "NCT05564377#2", "polarity": "include", "kind": "clinician", "params": { "test": "measurable_disease" }, "sourceText": "Patient must have measurable disease", "plain": { "en": "Your cancer can be measured on a scan.", "es": "Su cáncer se puede medir en un estudio de imagen." }, "confidence": "high" },
+    { "id": "NCT05564377#3", "polarity": "include", "kind": "clinician", "params": { "test": "ECOG", "min": 0, "max": 2 }, "sourceText": "Patient must have an Eastern Cooperative Oncology Group (ECOG) performance status between 0-2 OR patient must have Lansky performance status of >= 50% or Karnofsky performance status of >= 50%", "plain": { "en": "You are well enough to be up and about most of the day.", "es": "Está lo suficientemente bien como para estar activo la mayor parte del día." }, "confidence": "high" },
+    { "id": "NCT05564377#4", "polarity": "include", "kind": "clinician", "params": { "test": "tumor_sequencing" }, "sourceText": "All patients must have sequencing results available from a National Cancer Institute (NCI) credentialed Designated Laboratory (DL)", "plain": { "en": "You have gene test results from your tumor.", "es": "Tiene resultados de pruebas genéticas de su tumor." }, "confidence": "high" },
+    { "id": "NCT05564377#5", "polarity": "include", "kind": "clinician", "params": { "test": "prior_therapy_progression" }, "sourceText": "Patients must have progressed on at least one line of standard systemic therapy OR Patients whose disease has no standard treatment that has been shown to prolong overall survival", "plain": { "en": "Your cancer grew after standard treatment, or has no standard treatment.", "es": "Su cáncer creció después del tratamiento estándar, o no tiene tratamiento estándar." }, "confidence": "high" },
+    { "id": "NCT05564377#6", "polarity": "include", "kind": "unparsed", "params": {}, "sourceText": "Patient must be deemed potentially eligible for a ComboMATCH Treatment Trial as assessed by the enrolling provider", "plain": { "en": "The study doctor decides if you may fit a treatment study.", "es": "El médico del estudio decide si puede encajar en un estudio de tratamiento." }, "confidence": "low" }
+  ],
+  "flags": ["master_protocol"],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT05564377"
+}

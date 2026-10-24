@@ -1,0 +1,39 @@
+{
+  "nctId": "NCT05317585",
+  "title": {
+    "en": "Using a glucose monitor during pregnancy with type 2 diabetes",
+    "es": "Uso de un monitor de glucosa durante el embarazo con diabetes tipo 2",
+    "pt": "Uso de um monitor de glicose durante a gravidez com diabetes tipo 2",
+    "ht": "Itilize yon monitè glikoz pandan gwosès ak dyabèt tip 2",
+    "zh": "2型糖尿病孕期使用血糖监测仪",
+    "vi": "Dùng máy theo dõi đường huyết khi mang thai với bệnh tiểu đường loại 2"
+  },
+  "summary": {
+    "en": "This study compares a continuous glucose monitor to usual fingerstick checks for pregnant women with type 2 diabetes. It looks at how each one affects the baby and the mother's blood sugar. It is for women getting care at UMass Memorial.",
+    "es": "Este estudio compara un monitor continuo de glucosa con los pinchazos habituales en el dedo para mujeres embarazadas con diabetes tipo 2. Observa cómo cada uno afecta al bebé y al azúcar de la madre. Es para mujeres atendidas en UMass Memorial.",
+    "pt": "Este estudo compara um monitor contínuo de glicose com os testes de dedo habituais para gestantes com diabetes tipo 2. Observa como cada um afeta o bebê e o açúcar da mãe. É para mulheres atendidas no UMass Memorial.",
+    "ht": "Etid sa a konpare yon monitè glikoz kontinyèl ak tès dwèt abityèl pou fanm ansent ki gen dyabèt tip 2. Li gade kijan chak afekte tibebe a ak sik manman an. Se pou fanm k ap resevwa swen nan UMass Memorial.",
+    "zh": "本研究比较连续血糖监测仪与常规指尖采血检测，适用于患有2型糖尿病的孕妇。研究观察两者对婴儿和母亲血糖的影响。仅限在UMass Memorial就诊的女性。",
+    "vi": "Nghiên cứu này so sánh máy theo dõi đường huyết liên tục với cách chích ngón tay thông thường cho phụ nữ mang thai bị tiểu đường loại 2. Nó xem mỗi cách ảnh hưởng thế nào đến em bé và đường huyết của mẹ. Dành cho phụ nữ được chăm sóc tại UMass Memorial."
+  },
+  "phase": ["NA"],
+  "conditionIds": ["t2d", "pregnancy"],
+  "healthyVolunteers": false,
+  "ageMin": 18,
+  "sex": "FEMALE",
+  "sites": [
+    { "facility": "University of Massachusetts Memorial Medical Center", "city": "Worcester", "zip": "01605", "lat": 42.26259, "lon": -71.80229 }
+  ],
+  "contact": { "name": "Gianna L Wilkie, MD", "phone": "7743642523", "email": "Gianna.Wilkie@umassmemorial.org" },
+  "checks": [
+    { "id": "NCT05317585#1", "polarity": "include", "kind": "age", "params": { "min": 18 }, "sourceText": "age greater than or equal to 18 years old", "plain": { "en": "You are 18 or older.", "es": "Tiene 18 años o más." }, "confidence": "high" },
+    { "id": "NCT05317585#2", "polarity": "include", "kind": "sex", "params": { "sex": "FEMALE" }, "sourceText": "Women will be deemed eligible for the study", "plain": { "en": "This study is for women.", "es": "Este estudio es para mujeres." }, "confidence": "high" },
+    { "id": "NCT05317585#3", "polarity": "include", "kind": "question", "params": { "questionId": "q_pregnant_early" }, "sourceText": "singleton gestation less than or equal to 14 weeks at initial obstetric visit", "plain": { "en": "You are pregnant with one baby, early in the pregnancy.", "es": "Está embarazada de un solo bebé, al inicio del embarazo." }, "confidence": "low" },
+    { "id": "NCT05317585#4", "polarity": "include", "kind": "condition", "params": { "conditionIds": ["t2d"] }, "sourceText": "established diagnosis of T2DM by laboratory criteria including hemoglobin A1c ≥6.5%, oral glucose tolerance test ≥200 mg/dL, or fasting plasma glucose ≥126 mg/dL", "plain": { "en": "You have type 2 diabetes.", "es": "Tiene diabetes tipo 2." }, "confidence": "high" },
+    { "id": "NCT05317585#5", "polarity": "include", "kind": "question", "params": { "questionId": "q_care_at_ummhc" }, "sourceText": "receiving prenatal care at UMASS Memorial Health Care (UMMHC) and plans to deliver at UMMHC", "plain": { "en": "You get prenatal care and will deliver at UMass Memorial.", "es": "Recibe atención prenatal y dará a luz en UMass Memorial." }, "confidence": "low" },
+    { "id": "NCT05317585#6", "polarity": "exclude", "kind": "condition", "params": { "conditionIds": ["t1d"] }, "sourceText": "known diagnosis of type 1 diabetes or gestational diabetes", "plain": { "en": "You cannot join if you have type 1 diabetes or gestational diabetes.", "es": "No puede participar si tiene diabetes tipo 1 o diabetes gestacional." }, "confidence": "high" },
+    { "id": "NCT05317585#7", "polarity": "exclude", "kind": "question", "params": { "questionId": "q_multiple_pregnancy" }, "sourceText": "multifetal gestation", "plain": { "en": "You cannot join if you are pregnant with more than one baby.", "es": "No puede participar si está embarazada de más de un bebé." }, "confidence": "high" }
+  ],
+  "flags": [],
+  "officialUrl": "https://clinicaltrials.gov/study/NCT05317585"
+}

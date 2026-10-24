@@ -1,0 +1,128 @@
+[
+  {
+    "id": "q_severe_hypo",
+    "text": {
+      "en": "Have you had more than one episode of very low blood sugar, or trouble noticing when it drops?",
+      "es": "¿Ha tenido más de un episodio de azúcar muy baja en la sangre, o dificultad para notar cuando baja?"
+    }
+  },
+  {
+    "id": "q_pregnant_early",
+    "text": {
+      "en": "Are you pregnant with one baby and early in your pregnancy (14 weeks or less)?",
+      "es": "¿Está embarazada de un solo bebé y al inicio del embarazo (14 semanas o menos)?"
+    }
+  },
+  {
+    "id": "q_care_at_ummhc",
+    "text": {
+      "en": "Do you get your pregnancy care at UMass Memorial and plan to deliver there?",
+      "es": "¿Recibe su atención del embarazo en UMass Memorial y planea dar a luz allí?"
+    }
+  },
+  {
+    "id": "q_multiple_pregnancy",
+    "text": {
+      "en": "Are you pregnant with more than one baby (twins or more)?",
+      "es": "¿Está embarazada de más de un bebé (gemelos o más)?"
+    }
+  },
+  {
+    "id": "q_tried_diet_exercise",
+    "text": {
+      "en": "Have you tried to lose weight with diet or exercise before?",
+      "es": "¿Ha intentado antes bajar de peso con dieta o ejercicio?"
+    }
+  },
+  {
+    "id": "q_weight_loss_surgery",
+    "text": {
+      "en": "Have you had, or do you plan to have, surgery for weight loss?",
+      "es": "¿Ha tenido, o planea tener, una cirugía para bajar de peso?"
+    }
+  },
+  {
+    "id": "q_heart_attack_3m",
+    "text": {
+      "en": "Have you had a heart attack, stroke, or been hospitalized for heart failure in the last 3 months?",
+      "es": "¿Ha tenido un ataque al corazón, un derrame, o ha estado hospitalizado por insuficiencia cardíaca en los últimos 3 meses?"
+    }
+  },
+  {
+    "id": "q_device_help_apply",
+    "text": {
+      "en": "Can you put a device on your chest yourself, or do you have someone who can help?",
+      "es": "¿Puede colocarse un dispositivo en el pecho usted mismo, o tiene a alguien que le ayude?"
+    }
+  },
+  {
+    "id": "q_device_cognition",
+    "text": {
+      "en": "Are you able to learn how to use a chest monitor on your own?",
+      "es": "¿Puede aprender a usar un monitor de pecho por su cuenta?"
+    }
+  },
+  {
+    "id": "q_silicone_adhesive_allergy",
+    "text": {
+      "en": "Are you allergic or sensitive to silicone-based skin stickers or adhesives?",
+      "es": "¿Es alérgico o sensible a los adhesivos o pegamentos de silicona para la piel?"
+    }
+  },
+  {
+    "id": "q_shave_chest",
+    "text": {
+      "en": "Are you willing to shave chest hair if needed to attach a device?",
+      "es": "¿Está dispuesto a afeitarse el vello del pecho si es necesario para colocar un dispositivo?"
+    }
+  },
+  {
+    "id": "q_iv_inotrope",
+    "text": {
+      "en": "Are you on a continuous IV heart medicine drip (such as milrinone, dobutamine, or dopamine)?",
+      "es": "¿Recibe un goteo continuo de medicamento cardíaco por vía intravenosa (como milrinona, dobutamina o dopamina)?"
+    }
+  },
+  {
+    "id": "q_cell_coverage_home",
+    "text": {
+      "en": "Do you have cell phone coverage at your home?",
+      "es": "¿Tiene cobertura de teléfono celular en su casa?"
+    }
+  },
+  {
+    "id": "q_chest_skin_breakdown",
+    "text": {
+      "en": "Do you have broken or damaged skin on the left side of your chest?",
+      "es": "¿Tiene la piel rota o dañada en el lado izquierdo del pecho?"
+    }
+  },
+  {
+    "id": "q_speaks_english",
+    "text": {
+      "en": "Do you speak English?",
+      "es": "¿Habla inglés?"
+    }
+  },
+  {
+    "id": "q_menopause_transition",
+    "text": {
+      "en": "Are you going through menopause or did it start recently?",
+      "es": "¿Está pasando por la menopausia o comenzó hace poco?"
+    }
+  },
+  {
+    "id": "q_hot_flashes",
+    "text": {
+      "en": "Do you have hot flashes or night sweats?",
+      "es": "¿Tiene sofocos o sudores nocturnos?"
+    }
+  },
+  {
+    "id": "q_daily_diary",
+    "text": {
+      "en": "Are you willing to fill out a short diary every day?",
+      "es": "¿Está dispuesto/a a completar un diario breve todos los días?"
+    }
+  }
+]
