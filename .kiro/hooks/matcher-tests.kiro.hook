@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "name": "Matcher tests on save",
+  "description": "When the device matcher or a shared contract changes, run the matcher test suite (example-based + property-based) so a broken core promise is caught before commit.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "web/src/matcher/**/*.ts",
+      "shared/schema.ts",
+      "shared/vocab.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A matcher or shared-contract file was just edited. Run `npm test` from the repo root and report the result. If any matcher test fails (including the fast-check property tests in web/src/matcher/matcher.properties.test.ts), summarize the failing invariant and the minimal counterexample fast-check printed, and suggest the smallest fix. Do not change production code without asking."
+  }
+}
